@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.clsPersona;
+
+namespace WebForms_CSharp
+{
+    public partial class _Default : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            clsPersona per = new clsPersona();
+            
+            string name = txtNombre.Text;
+
+            if (string.IsNullOrEmpty(name))
+            {
+                lblValido.Text = "El nombre no puede estar vacío";
+
+            } else
+            {
+                lblValido.Text = "";
+                lblSaludo.Text = "Hola " + name;
+            }           
+          
+
+        }
+    }
+}
