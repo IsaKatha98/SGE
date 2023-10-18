@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Tema6_MDV/1.0.0": {
+        "runtime": {
+          "Tema6_MDV.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tema6_MDV/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
