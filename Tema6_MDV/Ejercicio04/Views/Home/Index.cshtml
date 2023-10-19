@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Tabla de multiplicar</h1>
+    <table>
+        @for (int i = 1; i <13; i++)
+        {
+            <tr>
+                    @for (int j=1; j<11; j++)
+                    {
+                    <td>
+                        
+                        <p>@i*@j=@(i*j)</p>
+                    </td>
+                    }
+            </tr>
+        }
+    </table>
+</div>

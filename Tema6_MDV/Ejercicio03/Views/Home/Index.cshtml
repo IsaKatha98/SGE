@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    DateTime moment = DateTime.Now;
+}
+<div class="text-center">
+    <h1 class="display-4">Hola, son las @moment.Hour:@moment.Minute del @moment.ToLongDateString() </h1>
+   
+    @if (moment.Hour<=12)
+    {
+        <p>AM, antes de las doce del mediodía</p>
+
+    } else
+    {
+        <p>PM, después de las doce de mediodía</p>
+    }
+
+</div>
