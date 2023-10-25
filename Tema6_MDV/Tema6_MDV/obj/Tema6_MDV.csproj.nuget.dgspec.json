@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj": {}
+    "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj": {
+    "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj",
+        "projectUniqueName": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj",
         "projectName": "Tema6_MDV",
-        "projectPath": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj",
-        "packagesPath": "C:\\Users\\IsaK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\obj\\",
+        "projectPath": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\Tema6_MDV.csproj",
+        "packagesPath": "C:\\Users\\ikloerzer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Tema6_MDV\\Tema6_MDV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\IsaK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ikloerzer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
