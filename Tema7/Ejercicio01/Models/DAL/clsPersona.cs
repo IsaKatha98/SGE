@@ -5,10 +5,7 @@
         #region atributos
         private string nombre;
         private string apellidos;
-        private DateTime fechaNac;
-        private long telefono;
-        private int id;
-        private int idDepartamento;
+       
         #endregion
 
         #region constructores
@@ -18,23 +15,14 @@
             apellidos = "";
         }
 
-        public clsPersona(int id, string nombre, string apellidos, int idDepartamento)
+        public clsPersona(string nombre, string apellidos)
         {
-            this.id = id;
+  
             this.nombre = nombre;
             this.apellidos = apellidos;
-            this.idDepartamento = idDepartamento;
+
         }
 
-        public clsPersona(int id, string nombre, string apellidos, DateTime fechaNac, long telefono, int idDepartamento)
-        {
-            this.id = id;
-            this.nombre = nombre;
-            this.apellidos = apellidos;
-            this.telefono= telefono;
-            this.fechaNac = fechaNac;
-            this.idDepartamento = idDepartamento;
-        }
         #endregion
 
         #region propiedades
@@ -48,32 +36,7 @@
             get { return apellidos; }
             set { apellidos = value; }
         }
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-        public DateTime FechaNac
-        {
-            get { return fechaNac; }
-            set { fechaNac = value; }
-        }
-        public long Telefono
-        {
-            get { return telefono; }
-            set { telefono = value; }
-        }
-
-        public int IdDepartamento
-        {
-            get { return idDepartamento; }
-            set { idDepartamento = value; }
-        }
-        public string NombreCompleto
-        {
-            get { return $"{nombre} {apellidos}"; }
-        }
-        public string Direccion { get; set; }
+      
         #endregion
         #region funciones y metodos
         ///<summary>

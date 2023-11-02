@@ -2,6 +2,7 @@
 using Ejercicio01.Models.DAL;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ejercicio01.Controllers
 {
@@ -11,6 +12,9 @@ namespace Ejercicio01.Controllers
         {
             var fechaActual=DateTime.Now;
             var mensaje = "Buenos días";
+
+
+            clsPersona persona = new clsPersona();
 
             if (fechaActual.Hour>=12)
             {
@@ -23,16 +27,24 @@ namespace Ejercicio01.Controllers
 
             ViewData["Mensaje"] = mensaje;
             ViewBag.fecha = fechaActual.ToLongDateString();
+
+            persona.Nombre = "Isabel Katharina";
+            persona.Apellidos = "Loerzer";
+          
             return View();
         }
-        private clsPersona persona = new clsPersona()
+       
+       
+        public ActionResult listadoPersonas()
         {
-            Id = 1,
-            Nombre = "Isabel Katharina",
-            Apellidos = "Loerzer",
-            Direccion = "Av de la Paz",
-            FechaNac = new DateTime(1998, 12, 05),
-            Telefono = 654444089,
-        };
+            try
+            {
+                return View(ListaPersonas.listadoPersonas());
+            }
+            catch (Exception ex) { return View("Error"); //Mandar otra vista return View(otraVista)};
+            
+        }
+    }
+        
     }
 }

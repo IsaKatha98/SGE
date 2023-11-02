@@ -1,8 +1,10 @@
-﻿@{
+﻿@model Ejercicio01.Models.DAL.clsPersona
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-@model Ejercicio01.Models.DAL.clsPersona
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
@@ -10,11 +12,10 @@
     <p>hoy es @ViewBag.fecha</p>
     <br/>
     <p>Datos del modelo:</p>
-    <p>Nombre:@Model.Nombre</p>
-    <p>Apellidos:@Model.Apellidos</p>
-    <p>Dirección:@Model.Direccion</p>
-    <p>Fecha de nacimiento:@Model.FechaNac</p>
-    <p>Telefono: @Model.Telefono</p>
+    
+    
     <br />
+
+    @Html.ActionLink("Listado de personas", "listadoPersonas");
     
 </div>
