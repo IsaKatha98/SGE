@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@* Indicamos el modelo de la vista *@
+
+@model List<Ejercicio03.Models.Entities.clsPersona>
+
+@*Enlaces para volver atrás*@
+@Html.ActionLink("Página Principal", "Index", "Home")
+
+<div class="text-center">
+    <form>
+
+        <label for="Nombre">Nombre:</label>
+
+        @*Esto debería funcionar*@
+        @Html.TextBoxFor(Model=>Model.Nombre)
+
+
+        <label for="personas">Selecciona el departamento: </label>
+        <select name="personas">
+            @{
+                foreach (var persona in Model)
+                {
+                    <option value="selected"> @persona.IdDepartamento</option>
+                }
+            }
+        </select>
+
+        <input type="submit" value="Guardar" />
+    </form>
+</div>
+
+
+
