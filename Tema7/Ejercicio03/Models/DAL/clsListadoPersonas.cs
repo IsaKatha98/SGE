@@ -2,10 +2,10 @@
 
 using Ejercicio03.Models.Entities;
     
-public static class clsListadoPersonaConDept
+public class clsListadoPersonas
     {
     //Nos creamos una función de tipo lista de clsPersona
-    public static List<clsPersona> listadoPersonasConDept()
+    public static List<clsPersona> listadoPersonas()
     {
 
         List<clsPersona> deptPersonas = new List<clsPersona>()

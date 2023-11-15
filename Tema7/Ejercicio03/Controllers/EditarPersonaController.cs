@@ -14,7 +14,7 @@ namespace Ejercicio03.Controllers
     /// <returns>Devuelve la vista EditarPersona</returns>
         public IActionResult EditarPersona()
         {
-            return View(clsListadoPersonaConDept.listadoPersonasConDept());
+            return View(clsListadoPersonas.listadoPersonas());
            
         }
     }

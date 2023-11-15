@@ -2,9 +2,14 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-@* Indicamos el modelo de la vista *@
 
-@model List<Ejercicio03.Models.Entities.clsPersona>
+@* Indicamos el modelo de la vista *@
+@model Ejercicio03.Models.ViewModel.clsPersonaDepartamento
+
+@*Creamos una variable que almacene una lista de personas*@
+@{
+    var modelo = Model.ListaPersonas[10];
+}
 
 @*Enlaces para volver atrás*@
 @Html.ActionLink("Página Principal", "Index", "Home")
@@ -15,15 +20,20 @@
         <label for="Nombre">Nombre:</label>
 
         @*Esto debería funcionar*@
-        @Html.TextBoxFor(Model=>Model.Nombre)
+        @Html.TextBoxFor(modelo=>modelo.Nombre)
+
+        <label for="Apellidos">Apellidos:</label>
+
+        @*Esto debería funcionar*@
+        @Html.TextBoxFor(modelo=>modelo.Apellidos)
 
 
-        <label for="personas">Selecciona el departamento: </label>
-        <select name="personas">
+        <label for="departamentos">Selecciona el departamento: </label>
+        <select id="departamentos" name="departamentos">
             @{
-                foreach (var persona in Model)
+                foreach (var departamento in Model.ListaDepartamentos)
                 {
-                    <option value="selected"> @persona.IdDepartamento</option>
+                    <option value="selected"> @departamento.NombreDepartamento</option>
                 }
             }
         </select>
