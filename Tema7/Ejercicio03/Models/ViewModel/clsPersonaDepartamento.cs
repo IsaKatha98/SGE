@@ -7,23 +7,23 @@ namespace Ejercicio03.Models.ViewModel
     public class clsPersonaDepartamento:clsPersona
     {
         #region atributos
-        private List<clsPersona> listaPersonas;
         private List<clsDepartamento> listaDepartamentos;
         #endregion
 
         #region constructores
         public clsPersonaDepartamento()
         {
-            listaPersonas = clsListadoPersonas.listadoPersonas();
+            //Lo metemos en el constructor para que siempre que se instancie un objeto
+            //de esta clase ya vaya rellena esta propiedad.
             listaDepartamentos = clsListadoDepartamentos.listadoDept();
+            this.Nombre="Isabel";
+            this.Apellidos = "Loerzer";
+            this.IdDepartamento = 1;
+            this.IdPersona = 1;
         }
         #endregion
 
         #region propiedades
-        public List<clsPersona> ListaPersonas
-        {
-            get { return listaPersonas; }
-        }
 
         public List<clsDepartamento> ListaDepartamentos
         {

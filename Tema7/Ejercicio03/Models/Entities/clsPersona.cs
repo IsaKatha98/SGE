@@ -8,6 +8,7 @@ namespace Ejercicio03.Models.Entities
         private string nombre;
         private string apellidos;
         private int idDepartamento;
+        private int idPersona;
 
         #endregion
 
@@ -19,12 +20,12 @@ namespace Ejercicio03.Models.Entities
 
         }
 
-        public clsPersona(string nombre, string apellidos, int idDepartamento)
+        public clsPersona(string nombre, string apellidos, int idDepartamento, int idPersona)
         {
             this.nombre = nombre;
             this.apellidos = apellidos;
             this.idDepartamento = idDepartamento;
-
+            this.idPersona = idPersona;
         }
         #endregion
 
@@ -46,6 +47,13 @@ namespace Ejercicio03.Models.Entities
         {
             get { return idDepartamento; }
             set { idDepartamento = value;}
+        }
+
+        public int IdPersona
+        {
+            get { return idPersona; }
+            set { idPersona = value; }
+        
         }
         #endregion
     }

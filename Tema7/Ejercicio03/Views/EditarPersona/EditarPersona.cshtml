@@ -2,43 +2,52 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-
 @* Indicamos el modelo de la vista *@
 @model Ejercicio03.Models.ViewModel.clsPersonaDepartamento
+@using Ejercicio03.Models.Entities;
 
-@*Creamos una variable que almacene una lista de personas*@
-@{
-    var modelo = Model.ListaPersonas[10];
-}
 
 @*Enlaces para volver atrás*@
 @Html.ActionLink("Página Principal", "Index", "Home")
 
 <div class="text-center">
-    <form>
+
+    @*Le digo que vaya a la vista que quiera con la vista correspondiente*@
+    <form asp-action="GuardarPersona">
+
+        <input type="hidden" name="IdPersona" value="@Model.IdPersona"  />
 
         <label for="Nombre">Nombre:</label>
 
-        @*Esto debería funcionar*@
-        @Html.TextBoxFor(modelo=>modelo.Nombre)
+        @*Hacemos el textbox del nombre*@
+        @Html.TextBoxFor(model=>model.Nombre)
 
         <label for="Apellidos">Apellidos:</label>
 
-        @*Esto debería funcionar*@
-        @Html.TextBoxFor(modelo=>modelo.Apellidos)
+        @*Textbox apellidos*@
+        @Html.TextBoxFor(model=>model.Apellidos)
 
 
         <label for="departamentos">Selecciona el departamento: </label>
-        <select id="departamentos" name="departamentos">
+        <select name="IdDepartamento">
             @{
-                foreach (var departamento in Model.ListaDepartamentos)
+                foreach (clsDepartamento departamento in Model.ListaDepartamentos)
                 {
-                    <option value="selected"> @departamento.NombreDepartamento</option>
+                    @if (Model.IdDepartamento==departamento.IdDepartamento){
+
+                        <option selected= value=@departamento.IdDepartamento> @departamento.NombreDepartamento</option>
+
+                    } else
+                    {
+                        <option value=@departamento.IdDepartamento> @departamento.NombreDepartamento</option>
+                    }
+
                 }
             }
         </select>
 
         <input type="submit" value="Guardar" />
+
     </form>
 </div>
 

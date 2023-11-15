@@ -1,4 +1,5 @@
-﻿using Ejercicio03.Models.DAL;
+﻿using Ejercicio03.Models.Entities;
+using Ejercicio03.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ejercicio03.Controllers
@@ -14,8 +15,20 @@ namespace Ejercicio03.Controllers
     /// <returns>Devuelve la vista EditarPersona</returns>
         public IActionResult EditarPersona()
         {
-            return View(clsListadoPersonas.listadoPersonas());
+            //Instanciaamos un objeto del modelo y lo mandamos a la vista
+            clsPersonaDepartamento objetoEditarPersona = new clsPersonaDepartamento();
+
+            return View(objetoEditarPersona);
            
         }
+
+        [HttpPost]
+        public IActionResult GuardarPersona(clsPersona persona)
+        {
+            return View();
+        }
+
+
+
     }
 }
