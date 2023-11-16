@@ -28,5 +28,13 @@ namespace Ejercicio03.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpPost]
+        public IActionResult Editar ()
+        {
+            clsPersona clsPersona = new clsPersona();
+            
+            return View();
+        }
     }
 }

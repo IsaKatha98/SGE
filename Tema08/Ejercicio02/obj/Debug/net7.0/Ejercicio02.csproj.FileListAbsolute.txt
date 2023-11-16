@@ -1,0 +1,7 @@
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema08\Ejercicio02\obj\Debug\net7.0\Ejercicio02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema08\Ejercicio02\obj\Debug\net7.0\Ejercicio02.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema08\Ejercicio02\obj\Debug\net7.0\Ejercicio02.AssemblyInfo.cs
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema08\Ejercicio02\obj\Debug\net7.0\Ejercicio02.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema08\Ejercicio02\obj\Debug\net7.0\Ejercicio02.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema08\Ejercicio02\obj\Debug\net7.0\Ejercicio02.RazorAssemblyInfo.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema08\Ejercicio02\obj\Debug\net7.0\Ejercicio02.RazorAssemblyInfo.cs
