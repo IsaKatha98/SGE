@@ -6,33 +6,20 @@ namespace Ejercicio02.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+       //Action de la primera vez que el usuario pide la página.
         public IActionResult Index()
         {
             return View();
         }
 
+        //Action cuando el usuario ha pulsado el botón.
         [HttpPost]
         public IActionResult IndexPost(string nombre)
         {
-            return View(nombre);
-        }
-
-        public IActionResult Privacy()
-        {
+            ViewBag.nombre = nombre;
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+      
     }
 }

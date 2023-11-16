@@ -4,5 +4,7 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <h1 class="display-4">@Html.ActionLink("Saludos", "Saludo", "Home", new{nombre = "Isa"}, null)</h1>
+
+    @*Este es el parámetro nombre, es decir, lo estamos pasando por query *@
+    <h1 class="display-4">@Html.ActionLink("Saludos", "Saludo", "Home", new{nombre = "Isa"})</h1>
 </div>
