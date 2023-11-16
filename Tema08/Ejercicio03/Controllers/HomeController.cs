@@ -7,22 +7,21 @@ namespace Ejercicio03.Controllers
     public class HomeController : Controller
     {
 
-        public IActionResult Index()
+        public IActionResult Editar()
         {
-            return View();
+            clsPersona persona = new clsPersona();
+            return View(persona);
         }
 
+        
         [HttpPost]
-        public IActionResult Editar ()
-        {
-            clsPersona clsPersona = new clsPersona();
-            
-            return View();
-        }
 
-        public IActionResult PersonaModificada ()
+        //Esto recoge un objeto persona y la manda a la 
+        //vsita PersonaModificada
+        public IActionResult Editar (clsPersona persona)
         {
-            return View();
+            
+            return View("PersonaModificada", persona);
         }
 
     }

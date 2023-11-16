@@ -1,0 +1,28 @@
+Models:
+
+	CAPA Entidades:
+
+		clsMision: clase que utilizaremos para guardar los datos de cada mision.
+		
+			Atributos: int id, string titulo, string descripcion, int creditos
+
+	CAPA DAL:
+
+		clsListadoMisiones: clase que devuelve un List de tipo clsMision
+	
+
+Controllers:
+
+		Home:
+			action Index() recibe clsListadoMisiones listaMisiones//return View(listamisiones)
+			Es decir, recibe un objeto clsListadoMisiones, lo instanciamos dentro del action y
+			lo devolvemos en la vista Index.
+
+			action Index(int id) recibe el id de una mision//return View(mision.id)
+			Es decir, recibe un objeto clsListadoMisiones, lo instanciamos dentro del action y
+			lo devolvemos en la vista Index.
+			
+			
+
+Views:
+

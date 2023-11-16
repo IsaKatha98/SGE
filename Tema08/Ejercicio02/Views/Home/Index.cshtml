@@ -6,11 +6,13 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
    
-</div
+</div>
 
-@using (Html.BeginForm ("PostIndex,"Home", FormMethod.Post))
-{
-    <input placeholder="Nombre"/>
-    <button type="submit">Enviar</button>
+@*Esto manda el formulario a la misma vista Index*@
+<form method="post">
 
-}
+    <input placeholder="Nombre" type="text" name="nombre"/>
+    <input type="submit" value="Enviar">
+
+
+</form>
