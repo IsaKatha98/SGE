@@ -1,28 +1,37 @@
-Models:
+CAPA Entidades:
 
-	CAPA Entidades:
-
-		clsMision: clase que utilizaremos para guardar los datos de cada mision.
+	clsMision: clase que utilizaremos para guardar los datos de cada mision.
 		
-			Atributos: int id, string titulo, string descripcion, int creditos
+		Atributos: int id, string titulo, string descripcion, int creditos
 
-	CAPA DAL:
+CAPA DAL: (capa de acceso a los datos//capa servicios-> se conecta a una API o una BBDD):
 
-		clsListadoMisiones: clase que devuelve un List de tipo clsMision
+	clsListadoMisionesDAL: clase que devuelve un List de tipo clsMision
+
+CAPA BL: (Bussiness Logic, filtra o revisa los datos que vienen de la DAL y la presenta a la UI)
+	En este caso, es lo mismo que la DAL.
+
+UI:
+
+	Models:
+		ViewModel: mi vista necesita un menú desplegable con la lista de misiones, un botón, 
+				y necesita presentar los detalles de la misión elegida. Se necesita 
+				unir una la clsMisiones.
+				clsListadoMisionesVM
 	
-
-Controllers:
+	Controllers:
 
 		Home:
-			action Index() recibe clsListadoMisiones listaMisiones//return View(listamisiones)
-			Es decir, recibe un objeto clsListadoMisiones, lo instanciamos dentro del action y
-			lo devolvemos en la vista Index.
+			action Index() llama clsListadoMisiones listaMisiones//return View(listamisiones)
+			Es decir, crea e instancia un objeto clsListadoMisiones, lo instanciamos dentro 			del action y lo devolvemos en la vista Index.
 
+			[HTTP Post]
 			action Index(int id) recibe el id de una mision//return View(mision.id)
 			Es decir, recibe un objeto clsListadoMisiones, lo instanciamos dentro del action y
 			lo devolvemos en la vista Index.
 			
 			
 
-Views:
-
+	Views:
+		Home
+			Index(), return View()
