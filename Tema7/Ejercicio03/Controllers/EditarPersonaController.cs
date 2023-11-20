@@ -19,7 +19,7 @@ namespace Ejercicio03.Controllers
             clsPersonaDepartamento objetoEditarPersona = new clsPersonaDepartamento();
 
             return View(objetoEditarPersona);
-           
+          
         }
 
         [HttpPost]

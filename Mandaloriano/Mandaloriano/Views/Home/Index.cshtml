@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Mandaloriano.Models.ViewModel.clsListadoMisionesVM
+
+<div class="text-center">
+    <h1 class="display-4">Listado de misiones</h1>
+   <br />
+
+   @*Formulario que muestra el listado de misiones y devuelve el id 
+       de la misión seleccionada.
+   *@
+
+   <form method="post">
+       <label>Misión:</label>
+
+       @*Esto es lo que le va a llegar al controler*@
+       <select name:"idMision">
+
+           @*En caso de que todavía no se haya seleccionada nada*@
+           <option value="NONSELECTEDVALUE">Elija una misión</option>
+
+           @*Recorremos la lista de misiones*@
+            @for (var i=0; i<Model.ListadoMisiones.Count; i++)
+            {
+                @*Indicamos el nombre de a misión*@
+                <option value="Model.ListadoMisiones[i].Id">@Model.ListadoMisiones[i].Titulo</option>
+            }
+
+       </select>
+
+        @*Ahora, hacemos el botón*@
+        <input type="submit" value="Detalles" />
+
+        <br />
+        <br />
+   </form>
+
+   @*Mostramos los detalles de la mision elegida*@
+    @if (Model.Id > 0)
+    {
+        <h4>@Model.Titulo</h4>
+        <br/>
+        <h4>@Model.Descripcion</h4>
+        <br/>
+        <h4>Recompensa:@Model.Creditos</h4>
+    }
+
+  
+
+
+</div>
