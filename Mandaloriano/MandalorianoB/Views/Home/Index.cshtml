@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using MandalorianoB.Entidades;
+@model MandalorianoB.Models.ViewModel.clsListadoMisionesVM
+
+<div class="text-center">
+    <h1 class="display-4">Listado de misiones</h1>
+   <br />
+
+   @*Formulario que muestra el listado de misiones y devuelve el id 
+       de la misión seleccionada.
+   *@
+
+   <form method="post">
+       <label>Misión:</label>
+
+       @*Esto es lo que le va a llegar al controler*@
+       <select name:"idMision">
+
+           @*En caso de que todavía no se haya seleccionada nada*@
+           <option value="NONSELECTEDVALUE">Elija una misión</option>
+
+           @*Recorremos la lista de misiones*@
+            @foreach(clsMision mision in Model.ListadoMisiones)
+            {
+               <option value="@mision.Id">@mision.Titulo</option>
+                
+            }
+            
+
+       </select>
+
+    </form>
+
+        @*Ahora, hacemos el botón*@
+        <input type="submit" value="Detalles" />
+
+
+    @*Mostramos los detalles de la mision elegida*@
+    @if (Model.Mision.Id>0)
+    {
+        <h4>@Model.Mision.Titulo</h4>
+        <br />
+        <h4>@Model.Mision.Descripcion</h4>
+        <br />
+        <h4>Recompensa:@Model.Mision.Creditos</h4>
+
+    }
+    
+
+   </div>
