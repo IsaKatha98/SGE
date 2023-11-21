@@ -1,39 +1,45 @@
+Entidades: 
+	clsMision: clase que utilizaremos para guardar los datos de cada mision.
+	->int id, string titulo, string descripcion, int creditos
+
+DAL:(capa de acceso a los datos//capa servicios-> se conecta a una API o una BBDD):
+
+	clsListadoMisionesDAL: clase que devuelve un List de tipo clsMision
+	->List<clsMision>listadoMisiones()	
 
 
 CAPA BL: (Bussiness Logic, filtra o revisa los datos que vienen de la DAL y la presenta a la UI)
 	En este caso, es lo mismo que la DAL.
 
 
-
+UI:
 	Models:
-		Entidades: 
-			clsMision: clase que utilizaremos para guardar los datos de cada mision.
-		
-			Atributos: int id, string titulo, string descripcion, int creditos
-		DAL:
-			(capa de acceso a los datos//capa servicios-> se conecta a una API o una BBDD):
-
-			clsListadoMisionesDAL: clase que devuelve un List de tipo clsMision
-
 		ViewModel: 
-			clsListadoMisionesVM: clase que llama a clsListadoMisionesDAL.
-						Hereda de la clsMision los atributos de cada misión.
-						Tiene la función buscaMision que reicibe un idMision y
-						devuelve un objeto mision.
+			clsListadoMisionesVM: 
+			->List<clsMision>ListadoMisiones; clsMision MisionActual
 						
-
-
-	
 	Controllers:
 
 		Home:
-			action Index() llama clsListadoMisiones listaMisiones//return View(listamisiones)
-			Es decir, crea e instancia un objeto clsListadoMisiones, lo instanciamos dentro
-			del action y lo devolvemos en la vista Index.
+			action Index(): 
+				List<clsMision>listadoMisiones=clsListadoMisionesDAL.listadoMisiones()
+ 				clsMision mision= new clsMision()
+				clsListadoMisionesVM vistaVM= new clsListadoMisionesVM(listadoMisiones, mision) 
+				return View(vistaVM)
 
 			[HTTP Post]
-			action Index(int id) recibe el id de una mision//return View(mision.id)	
+			action Index(int idMision):
+				List<clsMision> listadoMisiones = clsListadoMisionesDAL.listadoMisiones()
+				clsMision misionVM = new clsMision()
+				foreach (clsMision mision in listadoMisiones){
+    					if (mision.Id == idMision){
+        					misionVM.Id = mision.Id
+       						misionVM.Titulo = mision.Titulo
+        					misionVM.Descripcion = mision.Descripcion
+        					misionVM.Creditos = mision.Creditos}}
+				clsListadoMisionesVM vistaVM = new clsListadoMisionesVM(listadoMisiones, misionVM)
+				return View(vistaVM)
 
-	Views: mi vista necesita un menú desplegable con la lista de misiones, un botón, 
-				y necesita presentar los detalles de la misión elegida. 
+	Views: 
+		@model MandalorianoB.Models.ViewModel.clsListadoMisionesVM
 		

@@ -7,31 +7,32 @@ namespace MandalorianoB.Models.ViewModel
     {
         #region atributos
         private List<clsMision> listadoMisiones;
-        private clsMision mision;
+        private clsMision misionActual;
 
 
         #endregion
 
-        public clsListadoMisionesVM(List<clsMision> listadoMisiones, clsMision mision)
+        #region constructores
+        public clsListadoMisionesVM(List<clsMision> listadoMisiones, clsMision misionActual)
         {
             //Asignamos el listado de misiones al listado que devuelve la clase DAL.
             this.listadoMisiones = listadoMisiones;
-            this.mision = mision;
+            this.misionActual = misionActual;
 
         }
+        #endregion
 
-        /// <summary>
-        /// Esta propiedad devolverá una listado de Misiones
-        /// </summary>
+        #region propiedades
         public List<clsMision> ListadoMisiones
         {
             get { return listadoMisiones; }
         }
 
-        public clsMision Mision
+        public clsMision MisionActual
         {
-            get { return mision; }
+            get { return misionActual; }
 
         }
+        #endregion
     }
 }

@@ -17,7 +17,7 @@
        <label>Misión:</label>
 
        @*Esto es lo que le va a llegar al controler*@
-       <select name:"idMision">
+       <select name="idMision">
 
            @*En caso de que todavía no se haya seleccionada nada*@
            <option value="NONSELECTEDVALUE">Elija una misión</option>
@@ -32,20 +32,23 @@
 
        </select>
 
-    </form>
-
         @*Ahora, hacemos el botón*@
         <input type="submit" value="Detalles" />
+        <br/>
+        <br/>
 
+    </form>
 
-    @*Mostramos los detalles de la mision elegida*@
-    @if (Model.Mision.Id>0)
+      
+
+    @*Hacemos un if, porque la vista tiene por defecto el id a 0, en cuanto cambie ese id pues se muestra*@
+    @if (Model.MisionActual.Id>0)
     {
-        <h4>@Model.Mision.Titulo</h4>
+        <h4>@Model.MisionActual.Titulo</h4>
         <br />
-        <h4>@Model.Mision.Descripcion</h4>
+        <h4>@Model.MisionActual.Descripcion</h4>
         <br />
-        <h4>Recompensa:@Model.Mision.Creditos</h4>
+        <h4>Recompensa: @Model.MisionActual.Creditos créditos</h4>
 
     }
     
