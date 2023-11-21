@@ -3,10 +3,13 @@ using Mandaloriano.Models.Entidades;
 
 namespace Mandaloriano.Models.ViewModel
 {
-    public class clsListadoMisionesVM:clsMision
+    public class clsListadoMisionesVM
     {
         #region atributos
         private List<clsMision> listadoMisiones;
+        //Nos creamos un objeto de tipo clsMision
+        public clsMision Mision { get; set; }
+
 
         #endregion
 
@@ -14,7 +17,7 @@ namespace Mandaloriano.Models.ViewModel
         { 
             //Asignamos el listado de misiones al listado que devuelve la clase DAL.
             listadoMisiones=clsListadoMisionesDAL.listadoMisiones();
-            
+            this .Mision=
               
         }
 
