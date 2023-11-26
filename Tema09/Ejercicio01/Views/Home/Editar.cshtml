@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@*Llamamos al modelo*@
+@model Ejercicio01.Models.Entities.clsPersona
+
+@*Esto manda el formulario a la misma vista Index*@
+<form method="post">
+    <p>Nombre:</p>
+    @Html.TextBoxFor(Model=> Model.Nombre)
+    @Html.ValidationMessageFor(Model=>Model.Nombre)
+    <br />
+    <br/>
+    <p>Apellidos:</p>
+    @Html.TextBoxFor(model=>model.Apellidos)
+    @Html.ValidationMessageFor(model=>model.Apellidos)
+    <br />
+    <br />
+    <P>Fecha de nacimiento:</P>
+    @Html.TextBoxFor(model=>model.FechaNac)
+    @Html.ValidationMessageFor(model=>model.FechaNac)
+    <br />
+    <br />
+    <p>Dirección:</p>
+    @Html.TextBoxFor(model=>model.Direccion)
+    @Html.ValidationMessageFor(model=>model.Direccion)
+    <br />
+    <br />
+    <p>Teléfono:</p>
+    @Html.TextBoxFor(model=>model.Tlf)
+    @Html.ValidationMessageFor(model=>model.Tlf)
+    <br />
+    <br />
+
+    <input type="submit" value="Enviar">
+
+
+
+</form>
+
