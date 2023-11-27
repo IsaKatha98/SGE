@@ -35,7 +35,7 @@ namespace Ejercicio02.Controllers
 
         public ActionResult borrarPersona(int id) 
         { 
-        
+          
         
         }
 
