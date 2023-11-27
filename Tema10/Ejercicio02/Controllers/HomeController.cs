@@ -1,7 +1,7 @@
 ﻿using Ejercicio02.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using DAL;
+using DAL.Listados;
 
 namespace Ejercicio02.Controllers
 {
@@ -24,7 +24,7 @@ namespace Ejercicio02.Controllers
         {
             try
             {
-                return View(DAL.clsListadoPersonas.getListadoPersonas());
+                return View(clsListadoPersonas.getListadoPersonas());
             
             } catch (Exception ex)
             {
@@ -33,11 +33,7 @@ namespace Ejercicio02.Controllers
             }
         }
 
-        public ActionResult borrarPersona(int id) 
-        { 
-          
         
-        }
 
         public IActionResult Privacy()
         {

@@ -1,4 +1,6 @@
-﻿namespace Biblioteca
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Biblioteca
 {
     public class clsPersona
     {
@@ -64,6 +66,7 @@
 
             }
         }
+        [Required(ErrorMessage = "Campo obligatorio")]
 
         public string Apellidos
         {
@@ -75,6 +78,7 @@
             }
 
         }
+        [Required(ErrorMessage = "Campo obligatorio")]
 
         public string Direccion
         {
@@ -82,6 +86,7 @@
             set { direccion = value; }
         }
 
+        [DisplayFormat(DataFormatString = "{6XX-XXX-XXX}", ApplyFormatInEditMode = true)]
         public string Tlf
         {
             get { return tlf; }
@@ -95,6 +100,8 @@
             set { fotoURL = value; }
         }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime FechaNac
         {
             get { return fechaNac; }
@@ -106,6 +113,7 @@
             get { return idDepartamento; }
             set { idDepartamento = value; }
         }
+        [Required(ErrorMessage="Campo Obligatorio")]
         public string NombreCompleto
         {
             get { return Nombre + " " + Apellidos; }

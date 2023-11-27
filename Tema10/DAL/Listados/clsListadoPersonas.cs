@@ -1,28 +1,32 @@
 ﻿using Microsoft.Data.SqlClient;
 using Biblioteca;
+using DAL.Conexion;
 
-namespace DAL
+namespace DAL.Listados
 {
+    /// <summary>
+    /// Clase que se conecta con una base de datos y devuelve un listado de personas.
+    /// </summary>
     public class clsListadoPersonas
     {
-        public static List<clsPersona> getListadoPersonas() {
+        public static List<clsPersona> getListadoPersonas()
+        {
 
-            SqlConnection conexion = new SqlConnection();
+            clsMyConnection conexion = new clsMyConnection();
             List<clsPersona> listadoPersonas = new List<clsPersona>();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
             clsPersona oPersona;
 
-            conexion.ConnectionString
-            = "server=107-24\\SQLEXPRESS;database=Persona;uid=prueba;pwd=123;trustServerCertificate=true";
+           
 
             try
             {
-
-                conexion.Open();
+                //abrimos la conexion y la guardamos en una variable
+                SqlConnection  conexionAbierta=conexion.getConnection();
 
                 cmd.CommandText = "Select * from personas";
-                cmd.Connection = conexion;
+                cmd.Connection = conexionAbierta;
 
                 reader = cmd.ExecuteReader();
 
@@ -45,18 +49,20 @@ namespace DAL
                     }
                 }
                 reader.Close();
-                conexion.Close();
+                conexionAbierta.Close();
 
 
-            } catch (SqlException ex){
+            }
+            catch (SqlException ex)
+            {
                 throw ex;
             }
 
             return listadoPersonas;
 
         }
-     
 
-        
+
+
     }
 }

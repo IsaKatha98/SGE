@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Biblioteca\Biblioteca.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Conexion\" />
+  </ItemGroup>
+
 </Project>
