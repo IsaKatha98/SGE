@@ -4,7 +4,7 @@ using DAL;
 namespace Ejercicio03.Models.ViewModels
 {
     /// <summary>
-    /// 
+    /// TODO: atteglar lo del nombreDepartamento.
     /// </summary>
     public class clsListadoPersonasVM:clsDepartamento
     {

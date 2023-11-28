@@ -1,0 +1,54 @@
+﻿@model Ejercicio03.Models.ViewModels.clsEditVM
+@using Biblioteca;
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<hr />
+
+<div class="text-center">
+
+    @*Le digo que vaya a la vista que quiera con la vista correspondiente*@
+    <form asp-action="GuardarPersona">
+
+        <input type="hidden" name="IdPersona" value="@Model.IdPersona" />
+
+        <label for="Nombre">Nombre:</label>
+
+        <label for="Nombre">@Model.Nombre</label>
+
+        <br/>
+
+        <label for="Apellidos">Apellidos:</label>
+
+        <label for="Apellidos">@Model.Apellidos</label>
+
+        <br />
+
+        <label for="departamentos">Selecciona el departamento: </label>
+        <select name="IdDepartamento">
+            @{
+                foreach (clsDepartamento departamento in Model.ListaDepartamentos)
+                {
+                    @if (Model.IdDepartamento == departamento.IdDepartamento)
+                    {
+
+                        <option selected= value=@departamento.IdDepartamento> @departamento.Nombre</option>
+
+                    }
+                    else
+                    {
+                        <option value=@departamento.IdDepartamento> @departamento.Nombre</option>
+                    }
+
+                }
+            }
+        </select>
+
+        <input type="submit" value="Guardar" />
+
+    </form>
+</div>

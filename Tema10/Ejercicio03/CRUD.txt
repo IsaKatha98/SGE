@@ -1,0 +1,58 @@
+DAL
+    Conexion
+        clsMyConection
+
+    Listados
+        clsListadoPersonasDAL
+            List<clsPersona>getListadoPersonas
+
+    Manejadoras
+        clsManejadoraPersonasDAL
+            int deletePersonaDAL(int id)
+            int updatePersonaDAL(int id, int idDepartamento)
+            int insertPwrsonaDAL(todos los atributos de clsPErsona)
+
+Entidades
+    clsDepartamentos
+        int id
+        string nombreDepartamento
+
+    clsPersona
+        int id
+        string nombre
+        string apellidos
+        string direcccion
+        string telf 
+        string foto
+        DateTime fechaNac
+        int idDepartamento
+
+UI
+    Controllers
+        HomeController
+
+    Models
+        ViewModels
+            clsListadoPersonasVM
+            clsEditarVM
+            clsActualizarVM
+            clsBorrarVM
+            clsInsertarVM
+
+    Views
+        clsListadoPersonasView
+        clsEditarView
+        clsActualizarView
+        clsBorrarView
+        clsInsertarView
+
+BL
+    Listados
+        clsListadoPersonasBL
+            List<clsPersona>getListadoPersonas
+
+    Manejadoras
+        clsManejadoraPersonasBL
+            int deletePersonaBL(int id)
+            int updatePersonaBL(int id, int idDepartamento)
+            int insertPwrsonaBL(todos los atributos de clsPErsona)

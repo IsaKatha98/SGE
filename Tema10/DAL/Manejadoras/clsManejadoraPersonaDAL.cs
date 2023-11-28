@@ -98,20 +98,20 @@ namespace DAL.Manejadoras
 
         }
         /// <summary>
-        /// Método que actualiza el idDepartamento al que pertenece una persona.
+        /// Método que lee los detalles de una persona.
         /// 
         /// Pre: recibe un id de la persona y un idDepartamento.
-        /// Post: devuelve un número de filas actualizadas.
+        /// Post: 
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="idDepartamento"></param>
         /// <returns></returns>
-        public int readDetailsPersonaDAL(int id)
+        public clsPersona readDetailsPersonaDAL(int id)
         {
-            int numeroFilasAfectadas = 0;
-
+           
             clsMyConnection conexion = new clsMyConnection();
             SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+            clsPersona oPersona= new clsPersona();
 
             //Añadimos un parámetro que luego necesitaremos en el comando sql.
             cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
@@ -123,8 +123,26 @@ namespace DAL.Manejadoras
 
                 cmd.CommandText = "Select * from Personas WHERE ID=@id";
                 cmd.Connection = conexionAbierta;
-                numeroFilasAfectadas = cmd.ExecuteNonQuery();
 
+                reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        oPersona = new clsPersona();
+                        oPersona.IdPersona = (int)reader["ID"];
+                        oPersona.Nombre = (string)reader["Nombre"];
+                        oPersona.Apellidos = (string)reader["Apellidos"];
+                        oPersona.Tlf = (string)reader["Telefono"];
+                        oPersona.Direccion = (string)reader["Direccion"];
+                        oPersona.FotoURL = (string)reader["Foto"];
+                        oPersona.FechaNac = (DateTime)reader["FechaNacimiento"];
+                        oPersona.IdDepartamento = (int)reader["IDDepartamento"];
+
+                    }
+                }
+                reader.Close();
                 //Cerramos la conexión
                 conexionAbierta.Close();
 
@@ -135,7 +153,7 @@ namespace DAL.Manejadoras
             }
 
 
-            return numeroFilasAfectadas;
+            return oPersona;
 
 
         }

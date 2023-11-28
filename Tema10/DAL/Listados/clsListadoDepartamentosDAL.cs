@@ -12,7 +12,7 @@ namespace DAL.Listados
     /// <summary>
     /// Clase que se conecta con una base de datos y devuelve un listado de personas.
     /// </summary>
-    public class clsListadoDepartamentosDAL
+    public static class clsListadoDepartamentosDAL
     {
     
             public static List<clsDepartamento> getListadoDepartamentos()

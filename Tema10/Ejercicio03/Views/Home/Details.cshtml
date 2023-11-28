@@ -4,13 +4,21 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Datos:</h1>
+<h1>Datos</h1>
 
-<p>Nombre: @Model.Nombre</p>
 <br/>
-<p>Apellidos: @Model.Apellidos</p>
+<p>Nombre: @Model.Persona.Nombre</p>
+<br/>
+<p>Apellidos: @Model.Persona.Apellidos</p>
 <br />
-<p>Dirección: @Model.Direccion</p>
+<p>Dirección: @Model.Persona.Direccion</p>
 <br />
-<p>Nombre: @Model.</p>
+<p>Teléfono: @Model.Persona.Tlf</p>
 <br />
+<p>Imagen: @Model.Persona.FotoURL</p>
+<br />
+<p>Nombre Departamento: @Model.Nombre</p>
+<br />
+
+@*Le ponemos un enlace pa que vaya patrás.*@
+@Html.ActionLink("Listado de personas", "Index")

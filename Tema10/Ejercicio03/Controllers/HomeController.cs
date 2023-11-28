@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Biblioteca;
-using DAL;
+using DAL.Manejadoras;
 using DAL.Listados;
 using Ejercicio03.Models.ViewModels;
 
@@ -23,10 +23,63 @@ namespace Ejercicio03.Controllers
             return View(vistaVM);
         }
 
-        public IActionResult Details() {
+        public IActionResult Details(int id) {
+
+            //Quí técnicamente le tenemos que pasar la función readDetailsPersona de la clase DAL.
+            //Nos devuelve un int.
+            //Instanciamos un objeto de la clsManejadora para luego poder llamar a la función.
+            clsManejadoraPersonaDAL handler= new clsManejadoraPersonaDAL();
+
+            //guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
+            clsPersona persona= handler.readDetailsPersonaDAL(id);
             
 
-            return View();
+            //Ahora hacemos un if-else.
+            if (persona==null)
+            {
+                throw new Exception();
+            
+            } else
+            {
+                //Instanciamos el modelo que le pasaremos a la vista.
+                clsDetallesVM vistaDetails = new clsDetallesVM(persona);
+                return View(vistaDetails);
+            }
+        
+        }
+
+        public ActionResult Edit (int id)
+        {
+           
+            //Instanciamos la vista.
+            clsEditVM vistaEditVM = new clsEditVM();
+            
+            return View(vistaEditVM);
+        }
+
+        [HttpPost]
+        public ActionResult Edit (int id, int idDepartamento) 
+        {
+            //AQuí técnicamente le tenemos que pasar la función readDetailsPersona de la clase DAL.
+            //Nos devuelve un int.
+            //Instanciamos un objeto de la clsManejadora para luego poder llamar a la función.
+            clsManejadoraPersonaDAL handler = new clsManejadoraPersonaDAL();
+            int numFilasAfectadas = handler.updatePersonaDAL(id, idDepartamento);
+
+            //Ahora hacemos un if-else.
+            if (numFilasAfectadas > 0)
+            {
+                throw new Exception();
+
+            }
+            else
+            {
+                //nos lleva a la vista inicial.
+                return View("Index");
+
+            }
+
+           
         }
 
     }
