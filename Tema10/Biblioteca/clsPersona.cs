@@ -86,7 +86,6 @@ namespace Biblioteca
             set { direccion = value; }
         }
 
-        [DisplayFormat(DataFormatString = "{6XX-XXX-XXX}", ApplyFormatInEditMode = true)]
         public string Tlf
         {
             get { return tlf; }
@@ -114,6 +113,7 @@ namespace Biblioteca
             set { idDepartamento = value; }
         }
         [Required(ErrorMessage="Campo Obligatorio")]
+
         public string NombreCompleto
         {
             get { return Nombre + " " + Apellidos; }

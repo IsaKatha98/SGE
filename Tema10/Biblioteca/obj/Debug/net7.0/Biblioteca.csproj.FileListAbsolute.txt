@@ -1,0 +1,12 @@
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\bin\Debug\net7.0\Biblioteca.deps.json
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\bin\Debug\net7.0\Biblioteca.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\bin\Debug\net7.0\Biblioteca.pdb
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\Biblioteca.csproj.AssemblyReference.cache
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\Biblioteca.AssemblyInfoInputs.cache
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\Biblioteca.AssemblyInfo.cs
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\Biblioteca.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\refint\Biblioteca.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\Biblioteca.pdb
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Biblioteca\obj\Debug\net7.0\ref\Biblioteca.dll

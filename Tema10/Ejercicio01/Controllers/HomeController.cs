@@ -17,7 +17,7 @@ namespace Ejercicio01.Controllers
 
             try
             {
-                connection.ConnectionString = "server=107-24\\SQLEXPRESS;database=Persona;uid=prueba;pwd=123;trustServerCertificate=true";
+                connection.ConnectionString = "server=isakatha.database.windows.net;database=BDIsaKatha;uid=prueba;pwd=fernandoG321;trustServerCertificate=true";
                 connection.Open();
                 ViewBag.ConnectionState = $"Se ha abierto la conexión: {connection.State}";
 

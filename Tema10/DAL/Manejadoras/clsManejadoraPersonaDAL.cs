@@ -97,6 +97,48 @@ namespace DAL.Manejadoras
         
 
         }
+        /// <summary>
+        /// Método que actualiza el idDepartamento al que pertenece una persona.
+        /// 
+        /// Pre: recibe un id de la persona y un idDepartamento.
+        /// Post: devuelve un número de filas actualizadas.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="idDepartamento"></param>
+        /// <returns></returns>
+        public int readDetailsPersonaDAL(int id)
+        {
+            int numeroFilasAfectadas = 0;
+
+            clsMyConnection conexion = new clsMyConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            //Añadimos un parámetro que luego necesitaremos en el comando sql.
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
+
+            try
+            {
+                //abrimos la conexion y la guardamos en una variable
+                SqlConnection conexionAbierta = conexion.getConnection();
+
+                cmd.CommandText = "Select * from Personas WHERE ID=@id";
+                cmd.Connection = conexionAbierta;
+                numeroFilasAfectadas = cmd.ExecuteNonQuery();
+
+                //Cerramos la conexión
+                conexionAbierta.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return numeroFilasAfectadas;
+
+
+        }
 
         /// <summary>
         /// Método que inserta una persona nueva en la tabla Personas.
