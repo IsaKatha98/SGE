@@ -498,3 +498,5 @@ C:\Users\ikloerzer\Documents\GitHub\SGE\Tema10\Ejercicio03\obj\Debug\net7.0\Ejer
 C:\Users\ikloerzer\Documents\GitHub\SGE\Tema10\Ejercicio03\obj\Debug\net7.0\ref\Ejercicio03.dll
 C:\Users\ikloerzer\Documents\GitHub\SGE\Tema10\Ejercicio03\bin\Debug\net7.0\BL.dll
 C:\Users\ikloerzer\Documents\GitHub\SGE\Tema10\Ejercicio03\bin\Debug\net7.0\BL.pdb
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Ejercicio03\bin\Debug\net7.0\BL.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Tema10\Ejercicio03\bin\Debug\net7.0\BL.pdb

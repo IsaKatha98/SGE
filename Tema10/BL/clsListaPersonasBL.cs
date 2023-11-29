@@ -24,8 +24,8 @@ namespace BL
         public static clsPersona getPersonaByIdBL(int id)
         {
 
-            return clsManejadoraPersonaDAL.readDetailsPersonaDAL(id);
+            return clsListadoPersonas.readDetailsPersonaDAL(id);
 
-         }
+        }
     }
 }

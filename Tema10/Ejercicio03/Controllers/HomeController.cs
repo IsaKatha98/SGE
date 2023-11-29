@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Biblioteca;
 using BL;
+using Ejercicio03.Models.ViewModels;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ejercicio03.Controllers
@@ -20,19 +21,18 @@ namespace Ejercicio03.Controllers
 
         public IActionResult Details(int id) {
 
-            //guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
-            clsPersona persona= clsListaPersonasBL.getPersonaByIdBL(id);
-            
+            try
+            {
+                clsPersona persona= clsListaPersonasBL.getPersonaByIdBL(id);
+                //guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
+                clsDetailsVM detailsVM = new clsDetailsVM(persona);
 
-            //Ahora hacemos un if-else.
-            if (persona==null)
+                return View(detailsVM);
+            }
+            catch (Exception ex)
             {
                 return View("Error");
-            
-            } else
-            {
-                return View(persona);
-            }
+            }       
         
         }
 
