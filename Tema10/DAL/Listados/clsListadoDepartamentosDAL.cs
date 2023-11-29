@@ -28,7 +28,7 @@ namespace DAL.Listados
                 //abrimos la conexion y la guardamos en una variable
                 SqlConnection conexionAbierta = conexion.getConnection();
 
-                cmd.CommandText = "Select * from departamentos where id=@id";
+                cmd.CommandText = "Select * from departamentos";
                 cmd.Connection = conexionAbierta;
 
                 reader = cmd.ExecuteReader();

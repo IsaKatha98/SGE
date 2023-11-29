@@ -33,6 +33,15 @@ namespace BL
            
             return numFilasAfectadas;
         }
+
+        public static int editPersonaBL(clsPersona persona)
+        {
+            int numFilasAfectadas = 0;
+
+            numFilasAfectadas = clsManejadoraPersonaDAL.updatePersonaDAL(persona);
+
+            return numFilasAfectadas;
+        }
        
 
     }

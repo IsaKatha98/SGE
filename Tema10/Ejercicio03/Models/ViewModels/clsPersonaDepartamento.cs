@@ -4,7 +4,7 @@ using BL;
 namespace Ejercicio03.Models.ViewModels
 {
     //Hereda de persona y hacemos que se traiga un objeto clsDepartamento.
-    public class clsDetailsVM : clsPersona
+    public class clsPersonaDepartamento : clsPersona
     {
         #region atributos
         clsDepartamento departamento;
@@ -13,7 +13,7 @@ namespace Ejercicio03.Models.ViewModels
         #endregion
 
         #region cosntructores
-        public clsDetailsVM(clsPersona persona)
+        public clsPersonaDepartamento(clsPersona persona)
         {
 
             departamento = clsListadoDepartamentosBL.getDepartamentoByIdBL(persona.IdDepartamento);

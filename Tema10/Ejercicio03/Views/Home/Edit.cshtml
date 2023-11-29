@@ -1,4 +1,4 @@
-﻿@model Biblioteca.clsPersona
+﻿@model Ejercicio03.Models.ViewModels.clsPersonaListadoDepartamentos;
 
 @{
     ViewData["Title"] = "Edit";
@@ -6,17 +6,12 @@
 
 <h1>Edit</h1>
 
-<h4>clsPersona</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>
                 <input asp-for="Nombre" class="form-control" />
@@ -48,15 +43,12 @@
                 <span asp-validation-for="FechaNac" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdDepartamento" class="control-label"></label>
-                <input asp-for="IdDepartamento" class="form-control" />
-                <span asp-validation-for="IdDepartamento" class="text-danger"></span>
+                <label asp-for="ListaDepartamentos" class="control-label"></label>
+                <input asp-for="ListaDepartamentos" class="form-control" />
+                <span asp-validation-for="ListaDepartamentos" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="NombreCompleto" class="control-label"></label>
-                <input asp-for="NombreCompleto" class="form-control" />
-                <span asp-validation-for="NombreCompleto" class="text-danger"></span>
-            </div>
+           
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

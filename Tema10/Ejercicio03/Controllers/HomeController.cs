@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Biblioteca;
 using BL;
+using DAL;
 using Ejercicio03.Models.ViewModels;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -25,9 +26,9 @@ namespace Ejercicio03.Controllers
             {
                 clsPersona persona= clsListaPersonasBL.getPersonaByIdBL(id);
                 //guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
-                clsDetailsVM detailsVM = new clsDetailsVM(persona);
+                clsPersonaDepartamento vm = new clsPersonaDepartamento(persona);
 
-                return View(detailsVM);
+                return View(vm);
             }
             catch (Exception ex)
             {
@@ -60,16 +61,19 @@ namespace Ejercicio03.Controllers
         public ActionResult Edit (int id)
         {
             //Mostramos los detalles de la persona que vamos a editar
-            //clsPersona persona = clsManejadoraPersonaDAL.readDetailsPersonaDAL(id);
+            clsPersona persona = clsListaPersonasBL.getPersonaByIdBL(id);
 
-            return View();
+            //Instanciamos el Viewmodel que nos hace falta.
+            clsPersonaListadoDepartamentos vm= new clsPersonaListadoDepartamentos(persona);
+
+            return View(vm);
         }
 
         [HttpPost]
         public ActionResult Edit (clsPersona persona) 
         {
-           
-            //int numFilasAfectadas = clsManejadoraPersonaDAL.updatePersonaDAL(perso);
+           //Llamamos a la función que actualiza.
+            int numFilasAfectadas = clsManejadoraBL.editPersonaBL(persona);
 
             try
             {
@@ -86,22 +90,22 @@ namespace Ejercicio03.Controllers
 
         }
 
-        public ActionResult Delete (int Id) {
+        public ActionResult Delete (int id) {
             try
             {
-                // guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
-                clsPersona persona = clsListaPersonasBL.getPersonaByIdBL(Id);
+                clsPersona persona = clsListaPersonasBL.getPersonaByIdBL(id);
+                //guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
+                clsPersonaDepartamento vm = new clsPersonaDepartamento(persona);
 
-
-                return View(persona);
+                return View(vm);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return View("Error");
             }
 
-           
-        
+
+
         }
         [ActionName("Delete")]
         [HttpPost]
