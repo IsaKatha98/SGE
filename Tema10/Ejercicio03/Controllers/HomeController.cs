@@ -2,9 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Biblioteca;
-using DAL.Manejadoras;
-using DAL.Listados;
-using Ejercicio03.Models.ViewModels;
+using BL;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ejercicio03.Controllers
 {
@@ -14,72 +13,128 @@ namespace Ejercicio03.Controllers
         public IActionResult Index()
         {
             //Hay que pasale al VM una lista de personas y el objeto clsPersona.
-            List<clsPersona> listadoPersonas = clsListadoPersonas.getListadoPersonas();
-            clsPersona persona = new clsPersona();
-            //string nombreDepartamento = clsDepartamento.Nombre;
-            
-            clsListadoPersonasVM vistaVM = new clsListadoPersonasVM(listadoPersonas, persona);
+            List<clsPersona> listadoPersonas = clsListaPersonasBL.listadoCompletoPersonasBL();
 
-            return View(vistaVM);
+            return View(listadoPersonas);
         }
 
         public IActionResult Details(int id) {
 
-            //Quí técnicamente le tenemos que pasar la función readDetailsPersona de la clase DAL.
-            //Nos devuelve un int.
-            //Instanciamos un objeto de la clsManejadora para luego poder llamar a la función.
-            clsManejadoraPersonaDAL handler= new clsManejadoraPersonaDAL();
-
             //guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
-            clsPersona persona= handler.readDetailsPersonaDAL(id);
+            clsPersona persona= clsListaPersonasBL.getPersonaByIdBL(id);
             
 
             //Ahora hacemos un if-else.
             if (persona==null)
             {
-                throw new Exception();
+                return View("Error");
             
             } else
             {
-                //Instanciamos el modelo que le pasaremos a la vista.
-                clsDetallesVM vistaDetails = new clsDetallesVM(persona);
-                return View(vistaDetails);
+                return View(persona);
             }
         
         }
 
-        public ActionResult Edit (int id)
+        public ActionResult Create ()
         {
-           
-            //Instanciamos la vista.
-            clsEditVM vistaEditVM = new clsEditVM();
-            
-            return View(vistaEditVM);
+            return View();
         }
 
         [HttpPost]
-        public ActionResult Edit (int id, int idDepartamento) 
+        public ActionResult Create (int id, string nombre, string apellidos, string direccion, string tlf, string fotoURL, DateTime fechaNac, int idDepartamento)
         {
-            //AQuí técnicamente le tenemos que pasar la función readDetailsPersona de la clase DAL.
-            //Nos devuelve un int.
-            //Instanciamos un objeto de la clsManejadora para luego poder llamar a la función.
-            clsManejadoraPersonaDAL handler = new clsManejadoraPersonaDAL();
-            int numFilasAfectadas = handler.updatePersonaDAL(id, idDepartamento);
+            //Creamos una persona con los siguientes datos.
+            //int persona = clsManejadoraPersonaDAL.insertPersonaDAL(id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento);
 
-            //Ahora hacemos un if-else.
-            if (numFilasAfectadas > 0)
+            try
             {
-                throw new Exception();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+        }
+
+        public ActionResult Edit (int id)
+        {
+            //Mostramos los detalles de la persona que vamos a editar
+            //clsPersona persona = clsManejadoraPersonaDAL.readDetailsPersonaDAL(id);
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Edit (clsPersona persona) 
+        {
+           
+            //int numFilasAfectadas = clsManejadoraPersonaDAL.updatePersonaDAL(perso);
+
+            try
+            {
+
+                return RedirectToAction("Index");
 
             }
-            else
+            catch (Exception e)
             {
-                //nos lleva a la vista inicial.
-                return View("Index");
+                return View("Error");
+            }
 
+
+
+        }
+
+        public ActionResult Delete (int Id) {
+            try
+            {
+                // guardamos en una variable clsPersona el resultado de la función que lee los detalles de la persona.
+                clsPersona persona = clsListaPersonasBL.getPersonaByIdBL(Id);
+
+
+                return View(persona);
+            }
+            catch (Exception e)
+            {
+                return View("Error");
             }
 
            
+        
+        }
+        [ActionName("Delete")]
+        [HttpPost]
+        public ActionResult DeletePost (int id)
+        {
+            try
+            {
+                int numFilas = clsManejadoraBL.deletePersonaBL(id);
+
+                if (numFilas == 0)
+                {
+                    ViewBag.Info = "No existe esa persona";
+                }
+                else if (numFilas == -1)
+                {
+                    ViewBag.Info = "Hoy es miércoles, no se pueden borrar elementos";
+                }
+                else
+                {
+                    ViewBag.Info = "La persona se ha borrado correctamente";
+                }
+
+                return View( "Index", clsListaPersonasBL.listadoCompletoPersonasBL());
+
+                
+
+            } catch (Exception e)
+            {
+                return View("Error");
+            }
+
+
+
         }
 
     }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Manejadoras
 {
-    public class clsManejadoraPersonaDAL
+    public static class clsManejadoraPersonaDAL
     {
         
        /// <summary>
@@ -21,7 +21,7 @@ namespace DAL.Manejadoras
        /// </summary>
        /// <param name="id"></param>
        /// <returns></returns>
-        public int deletePersonaDAL (int id)
+        public static int deletePersonaDAL (int id)
         {
             int numeroFilasAfectadas = 0;
 
@@ -63,7 +63,7 @@ namespace DAL.Manejadoras
         /// <param name="id"></param>
         /// <param name="idDepartamento"></param>
         /// <returns></returns>
-        public int updatePersonaDAL (int id, int idDepartamento)
+        public static int updatePersonaDAL (int id, int idDepartamento)
         {
             int numeroFilasAfectadas = 0;
 
@@ -105,7 +105,7 @@ namespace DAL.Manejadoras
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public clsPersona readDetailsPersonaDAL(int id)
+        public static clsPersona readDetailsPersonaDAL(int id)
         {
            
             clsMyConnection conexion = new clsMyConnection();
@@ -130,8 +130,8 @@ namespace DAL.Manejadoras
                 {
                     while (reader.Read())
                     {
-                        oPersona = new clsPersona();
-                        oPersona.IdPersona = (int)reader["ID"];
+                        
+                        oPersona.Id = (int)reader["ID"];
                         oPersona.Nombre = (string)reader["Nombre"];
                         oPersona.Apellidos = (string)reader["Apellidos"];
                         oPersona.Tlf = (string)reader["Telefono"];
@@ -172,7 +172,7 @@ namespace DAL.Manejadoras
         /// <param name="fechaNac"></param>
         /// <param name="idDepartamento"></param>
         /// <returns></returns>
-        public int insertPersonaDAL (string nombre, string apellidos, string tlf, string direccion, string foto, DateOnly fechaNac, int idDepartamento)
+        public static int insertPersonaDAL (int id, string nombre, string apellidos, string tlf, string direccion, string foto, DateTime fechaNac, int idDepartamento)
         {
 
             int numeroFilasAfectadas = 0;
@@ -181,6 +181,7 @@ namespace DAL.Manejadoras
             SqlCommand cmd = new SqlCommand();
 
             //Añadimos un parámetro que luego necesitaremos en el comando sql.
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
             cmd.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar,30).Value = nombre;
             cmd.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar,60).Value = apellidos;
             cmd.Parameters.Add("@tlf", System.Data.SqlDbType.VarChar, 15).Value = tlf;
@@ -193,8 +194,8 @@ namespace DAL.Manejadoras
                 //abrimos la conexion y la guardamos en una variable
                 SqlConnection conexionAbierta = conexion.getConnection();
 
-                cmd.CommandText = "INSERT INTO Personas(Nombre, Apellidos, Telefono, Direccion, Foto, FechaNacimiento, IDDepartamento)" +
-                    "values (@nombre, @apellidos, @tld, @direccion, @foto, @fechaNac,@idDepartamento)";
+                cmd.CommandText = "INSERT INTO Personas(ID, Nombre, Apellidos, Telefono, Direccion, Foto, FechaNacimiento, IDDepartamento)" +
+                    "values (@id, @nombre, @apellidos, @tlf, @direccion, @foto, @fechaNac,@idDepartamento)";
                 cmd.Connection = conexionAbierta;
                 numeroFilasAfectadas = cmd.ExecuteNonQuery();
 

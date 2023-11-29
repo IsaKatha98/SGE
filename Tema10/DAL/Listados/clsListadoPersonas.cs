@@ -35,7 +35,7 @@ namespace DAL.Listados
                     while (reader.Read())
                     {
                         oPersona = new clsPersona();
-                        oPersona.IdPersona = (int)reader["ID"];
+                        oPersona.Id = (int)reader["ID"];
                         oPersona.Nombre = (string)reader["Nombre"];
                         oPersona.Apellidos = (string)reader["Apellidos"];
                         oPersona.Tlf = (string)reader["Telefono"];

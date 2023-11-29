@@ -1,5 +1,4 @@
-﻿@model Ejercicio03.Models.ViewModels.clsEditVM
-@using Biblioteca;
+﻿@model Biblioteca.clsPersona
 
 @{
     ViewData["Title"] = "Edit";
@@ -7,48 +6,65 @@
 
 <h1>Edit</h1>
 
+<h4>clsPersona</h4>
 <hr />
-
-<div class="text-center">
-
-    @*Le digo que vaya a la vista que quiera con la vista correspondiente*@
-    <form asp-action="GuardarPersona">
-
-        <input type="hidden" name="IdPersona" value="@Model.IdPersona" />
-
-        <label for="Nombre">Nombre:</label>
-
-        <label for="Nombre">@Model.Nombre</label>
-
-        <br/>
-
-        <label for="Apellidos">Apellidos:</label>
-
-        <label for="Apellidos">@Model.Apellidos</label>
-
-        <br />
-
-        <label for="departamentos">Selecciona el departamento: </label>
-        <select name="IdDepartamento">
-            @{
-                foreach (clsDepartamento departamento in Model.ListaDepartamentos)
-                {
-                    @if (Model.IdDepartamento == departamento.IdDepartamento)
-                    {
-
-                        <option selected= value=@departamento.IdDepartamento> @departamento.Nombre</option>
-
-                    }
-                    else
-                    {
-                        <option value=@departamento.IdDepartamento> @departamento.Nombre</option>
-                    }
-
-                }
-            }
-        </select>
-
-        <input type="submit" value="Guardar" />
-
-    </form>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellidos" class="control-label"></label>
+                <input asp-for="Apellidos" class="form-control" />
+                <span asp-validation-for="Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tlf" class="control-label"></label>
+                <input asp-for="Tlf" class="form-control" />
+                <span asp-validation-for="Tlf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FotoURL" class="control-label"></label>
+                <input asp-for="FotoURL" class="form-control" />
+                <span asp-validation-for="FotoURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNac" class="control-label"></label>
+                <input asp-for="FechaNac" class="form-control" />
+                <span asp-validation-for="FechaNac" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdDepartamento" class="control-label"></label>
+                <input asp-for="IdDepartamento" class="form-control" />
+                <span asp-validation-for="IdDepartamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreCompleto" class="control-label"></label>
+                <input asp-for="NombreCompleto" class="form-control" />
+                <span asp-validation-for="NombreCompleto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
 </div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

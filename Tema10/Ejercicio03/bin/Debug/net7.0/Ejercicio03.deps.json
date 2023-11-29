@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "Ejercicio03/1.0.0": {
         "dependencies": {
+          "BL": "1.0.0",
           "Biblioteca": "1.0.0",
-          "DAL": "1.0.0",
           "Microsoft.Data.SqlClient": "5.1.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.11"
         },
@@ -2374,6 +2374,15 @@
           "Biblioteca.dll": {}
         }
       },
+      "BL/1.0.0": {
+        "dependencies": {
+          "Biblioteca": "1.0.0",
+          "DAL": "1.0.0"
+        },
+        "runtime": {
+          "BL.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "dependencies": {
           "Biblioteca": "1.0.0",
@@ -3827,6 +3836,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Biblioteca/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

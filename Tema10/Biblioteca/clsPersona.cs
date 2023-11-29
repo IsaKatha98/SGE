@@ -5,7 +5,7 @@ namespace Biblioteca
     public class clsPersona
     {
         #region atributos
-        private int idPersona;
+        private int id;
         private string nombre;
         private string apellidos;
         private string direccion;
@@ -20,7 +20,7 @@ namespace Biblioteca
         #region constructores
         public clsPersona()
         {
-            idPersona = 0;
+            id = 0;
             nombre = "";
             apellidos = "";
             direccion=string.Empty;
@@ -33,9 +33,10 @@ namespace Biblioteca
 
         }
 
-        public clsPersona(int idPersona,string nombre, string apellidos,string direccion, string tlf, string fotoURL, DateTime fechaNac, int idDepartamento)
+        public clsPersona(int id,string nombre, string apellidos,string direccion, string tlf, string fotoURL, DateTime fechaNac, int idDepartamento)
         {
-            this.idPersona = idPersona;
+            //Aquí hay modificar esto, porque el id no te lo puede poner la persona.
+            this.id = id;
             this.nombre = nombre;
             this.apellidos = apellidos;
             this.direccion=direccion;
@@ -49,10 +50,10 @@ namespace Biblioteca
 
         #region propiedades
 
-        public int IdPersona
+        public int Id
         {
-            get { return idPersona; }
-            set { idPersona = value; }
+            get { return id; }
+            set { id = value; }
 
         }
         public string Nombre

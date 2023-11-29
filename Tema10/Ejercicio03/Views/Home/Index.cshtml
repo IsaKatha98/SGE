@@ -1,78 +1,84 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Biblioteca.clsPersona>
+
+@{
+    ViewData["Title"] = "Index";
 }
-@*Llamamos al modelo y los using que nos hagan falta*@
-@using Biblioteca;
-@model Ejercicio03.Models.ViewModels.clsListadoPersonasVM;
 
+<h1>Index</h1>
+<h3>@ViewBag.Info</h3>
 
-@*Aquí mostramos el listado personas*@
-<h1>Lista de personas</h1>
-
-@try {
-    <table class="table">
-        <thead>
-            <tr>
-                
-                <th>
-                    @Html.DisplayNameFor(model => model.Persona.Nombre)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Persona.Apellidos)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Persona.Tlf)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Persona.Direccion)
-                </th>               
-                <th>
-                    @Html.DisplayNameFor(model => model.Persona.FotoURL)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Persona.FechaNac)
-                </th>
-                
-               
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.ListadoPersonas)
-            {
-                <tr>
-                    
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nombre)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Apellidos)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Tlf)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Direccion)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FotoURL)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FechaNac)
-                    </td>
-                    <td>
-
-                        @Html.ActionLink("Edit", "Edit", new { id=item.IdPersona }) |
-                        @Html.ActionLink("Details", "Details", new {  id=item.IdPersona }) |
-                        @Html.ActionLink("Delete", "Delete", new {  id=item.IdPersona })
-
-                    </td>
-                </tr>
-            }
-        </tbody>
-
-    </table>
-    @*TODO:Preguntarle a Fernando por el error y por cómo mostrar el nombreDepartamento en la tabla*@
-} catch (Exception ex)
-{
-    ErrorViewModel.mensajeError();   
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tlf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FotoURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdDepartamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCompleto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tlf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FotoURL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdDepartamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCompleto)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.Id })
+            </td>
+        </tr>
 }
+    </tbody>
+</table>
