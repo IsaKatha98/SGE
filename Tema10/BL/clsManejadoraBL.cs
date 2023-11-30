@@ -42,6 +42,16 @@ namespace BL
 
             return numFilasAfectadas;
         }
+
+        public static int createPersonaBL (clsPersona persona) { 
+        
+            int numFilasAfectadas= 0;
+
+            numFilasAfectadas = clsManejadoraPersonaDAL.insertPersonaDAL(persona);
+
+            return numFilasAfectadas;
+        
+        }
        
 
     }

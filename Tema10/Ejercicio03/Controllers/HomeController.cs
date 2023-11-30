@@ -39,18 +39,39 @@ namespace Ejercicio03.Controllers
 
         public ActionResult Create ()
         {
-            return View();
+            //instanciamos el vm con los datos que le pasamos.
+            clsPersonaListadoDepartamentos vm = new clsPersonaListadoDepartamentos();
+            return View(vm);
         }
 
         [HttpPost]
-        public ActionResult Create (int id, string nombre, string apellidos, string direccion, string tlf, string fotoURL, DateTime fechaNac, int idDepartamento)
+        public ActionResult Create (clsPersona persona)
         {
-            //Creamos una persona con los siguientes datos.
-            //int persona = clsManejadoraPersonaDAL.insertPersonaDAL(id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento);
+           
 
             try
             {
-                return RedirectToAction("Index");
+              
+
+
+                int numFilasAfectadas = clsManejadoraBL.createPersonaBL(persona);
+
+
+                if (numFilasAfectadas == 0)
+                {
+                    ViewBag.Info = "No se ha creado la persona";
+                }
+             
+                else
+                {
+                    ViewBag.Info = "La persona se ha creado correctamente";
+                }
+
+                return View("Index", clsListaPersonasBL.listadoCompletoPersonasBL());
+
+
+
+
             }
             catch (Exception ex)
             {

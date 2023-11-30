@@ -1,5 +1,6 @@
 ﻿@model Ejercicio03.Models.ViewModels.clsPersonaListadoDepartamentos;
 
+
 @{
     ViewData["Title"] = "Edit";
 }
@@ -42,11 +43,26 @@
                 <input asp-for="FechaNac" class="form-control" />
                 <span asp-validation-for="FechaNac" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ListaDepartamentos" class="control-label"></label>
-                <input asp-for="ListaDepartamentos" class="form-control" />
-                <span asp-validation-for="ListaDepartamentos" class="text-danger"></span>
-            </div>
+            <label for="departamentos">Selecciona el departamento: </label>
+            <select name="IdDepartamento">
+                @{
+                    foreach (var departamento in Model.ListaDepartamentos)
+                    {
+                        @if (Model.IdDepartamento == departamento.IdDepartamento)
+                        {
+
+                            <option selected= value=@departamento.IdDepartamento> @departamento.Nombre</option>
+
+                        }
+                        else
+                        {
+                            <option value=@departamento.IdDepartamento> @departamento.Nombre</option>
+                        }
+
+                    }
+                }
+            </select>
+
            
 
             <div class="form-group">

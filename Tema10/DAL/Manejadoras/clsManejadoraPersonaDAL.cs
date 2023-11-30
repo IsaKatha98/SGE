@@ -121,7 +121,7 @@ namespace DAL.Manejadoras
         /// <param name="fechaNac"></param>
         /// <param name="idDepartamento"></param>
         /// <returns></returns>
-        public static int insertPersonaDAL (string nombre, string apellidos, string tlf, string direccion, string foto, DateTime fechaNac, int idDepartamento)
+        public static int insertPersonaDAL (clsPersona persona)
         {
 
             int numeroFilasAfectadas = 0;
@@ -130,13 +130,14 @@ namespace DAL.Manejadoras
             SqlCommand cmd = new SqlCommand();
 
             //Añadimos un parámetro que luego necesitaremos en el comando sql.
-            cmd.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar,30).Value = nombre;
-            cmd.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar,60).Value = apellidos;
-            cmd.Parameters.Add("@tlf", System.Data.SqlDbType.VarChar, 15).Value = tlf;
-            cmd.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar, 60).Value = direccion;
-            cmd.Parameters.Add("@foto", System.Data.SqlDbType.VarChar, 255).Value = foto;
-            cmd.Parameters.Add("@fechaNac", System.Data.SqlDbType.Date).Value = fechaNac;
-            cmd.Parameters.Add("@idDepartamento", System.Data.SqlDbType.Int).Value = idDepartamento;
+            cmd.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar, 30).Value = persona.Nombre;
+            cmd.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar, 60).Value = persona.Apellidos;
+            cmd.Parameters.Add("@tlf", System.Data.SqlDbType.VarChar, 15).Value = persona.Tlf;
+            cmd.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar, 60).Value = persona.Direccion;
+            cmd.Parameters.Add("@foto", System.Data.SqlDbType.VarChar, 255).Value = persona.FotoURL;
+            cmd.Parameters.Add("@fechaNac", System.Data.SqlDbType.Date).Value = persona.FechaNac;
+            cmd.Parameters.Add("@idDepartamento", System.Data.SqlDbType.Int).Value = persona.IdDepartamento;
+
             try
             {
                 //abrimos la conexion y la guardamos en una variable

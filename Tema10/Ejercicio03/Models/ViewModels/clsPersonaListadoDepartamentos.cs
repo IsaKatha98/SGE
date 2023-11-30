@@ -27,6 +27,15 @@ namespace Ejercicio03.Models.ViewModels
             this.IdDepartamento = persona.IdDepartamento;
             this.FotoURL = persona.FotoURL;
         }
+
+        public clsPersonaListadoDepartamentos()
+        {
+            //Lo metemos en el constructor para que siempre que se instancie un objeto
+            //de esta clase ya vaya rellena esta propiedad.
+            listaDepartamentos = clsListadoDepartamentosBL.listadoCompletoDepartamentosBL();
+
+            
+        }
         #endregion
 
         #region propiedades
