@@ -1,0 +1,45 @@
+Entities
+	clsMarca
+	clsModelo
+
+DAL
+	Listados
+		clsListadoMarcasDAL-> List<clsMarca> getListadoMarcasDAL()					
+		clsListadoModelosDAL->List<clsModelo> getListadoModelosDAL()
+					
+	Handler	
+		clsHandlerMarca-> clsMarca getMarcaByIdDAL(int idMarca)
+		clsHandlerModeloss-> clsModelo getModeloByIdDAL(int idModelo)
+					int editPrecio(clsModelo modelo)
+					
+BL
+	Listados
+		clsListadoMarcasBL-> List<clsMarca> getListadoMarcasBL()
+					
+		clsListadoModelosBL ->List<clsModelo> getListadoModeloBL()
+					
+	Handler	
+		clsHandlerMarca-> clsMarca getMarcaByIdDAL(int idMarca)
+		clsHandlerModelos-> 
+					clsModelo getModeloByIdBL(int idModelo)
+
+					int editPrecio(clsModelo modelo) -> si el precio es menor o igual al que ya tenía
+								no se puede modificar
+
+UI
+	Controllers
+		HomeController
+			ActionResult Listado()
+			[HttpPost] ActionResult Listado (int idMarca) -> devuelve un listado
+			ActionResult Edit(int idModelo)
+			[HttpPost] ActionResult Edit (clsModelo modelo) -> devuelve un int por si se ha 										actualizado el precio
+
+	Models
+		ViewModels
+			clsListadoMarcasListadoModelosObjetoModelo->Este VM hereda de clsModelo
+			clsMarcaModelo->este VM hereda de clsModelo
+		
+	Views
+		List
+		Edit
+
