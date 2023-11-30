@@ -1,0 +1,1 @@
+C:\Users\ikloerzer\Documents\GitHub\SGE\Tema10\CRUD\CRUD.csproj;x64
