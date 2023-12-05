@@ -33,7 +33,7 @@ namespace IU.Controllers
             try
             {
                 //Instanciamos el vm, el contructor con idMarca que nos devuelve el listado de modelos asociados a ese idMarca.
-                //clsListadoMarcasListadoModelosObjModelo vm = new clsListadoMarcasListadoModelosObjModelo(idMarca);
+                clsListadoMarcasListadoModelosObjModelo vm = new clsListadoMarcasListadoModelosObjModelo(idMarca);
 
                 return View();
             }
@@ -54,7 +54,7 @@ namespace IU.Controllers
                 clsModelo modelo = clsHandlerModelosBL.getModeloById(idModelo);
 
                 //Instanciamos el vm.
-                // clsMarcaModelo vm = clsMarcaModelo(modelo);
+                clsMarcaModelo vm = new clsMarcaModelo(modelo);
 
                 return View();
             }

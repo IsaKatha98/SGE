@@ -30,7 +30,6 @@ namespace IU.Models.ViewModels
         #region propiedades
         public clsMarca Marca
         {
-
             //Solo hay get porque en el VM no se va a poder modificar
             get { return marca; }
 
