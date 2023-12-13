@@ -3,6 +3,7 @@ using Entities;
 
 namespace IU.Models.ViewModels
 {
+    //TODO: no necesita heredar de clsModelo
     public class clsListadoMarcasListadoModelosObjModelo: clsModelo
     {
         #region atributos

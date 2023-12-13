@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using DAL.Listados;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,13 @@ namespace DAL.Handler
         /// <returns>un objeto clsModelo donde se han leído los datos de la tabla encontrada.</returns>
         public static clsModelo getModeloById(int idModdelo)
         {
+            //corrección
+            bool encontrado = false;
+            int cont = 0;
+
+            //TODO:hacemos una búsqueda dentro de un bucle while
+            while (!encontrado&& cont>=clsListadoModelosDAL.getListadoModelosDAL)
+            
             return new clsModelo();
         }
 
