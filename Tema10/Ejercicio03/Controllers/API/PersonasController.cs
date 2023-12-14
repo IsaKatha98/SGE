@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Biblioteca;
+using BL;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,9 +12,9 @@ namespace Ejercicio03.Controllers.API
     {
         // GET: api/<PersonasController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<clsPersona> Get()
         {
-            return new string[] { "value1", "value2" };
+            return clsListaPersonasBL.listadoCompletoPersonasBL();
         }
 
         // GET api/<PersonasController>/5

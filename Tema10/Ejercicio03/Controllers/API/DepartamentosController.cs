@@ -12,9 +12,9 @@ namespace Ejercicio03.Controllers.API
     {
         // GET: api/<DepartamentosController>
         [HttpGet]
-        public IEnumerable<clsPersona> Get()
+        public IEnumerable<clsDepartamento> Get()
         {
-            return clsListaPersonasBL.listadoCompletoPersonasBL();
+            return  clsListadoDepartamentosBL.listadoCompletoDepartamentosBL();
         }
 
         // GET api/<DepartamentosController>/5
