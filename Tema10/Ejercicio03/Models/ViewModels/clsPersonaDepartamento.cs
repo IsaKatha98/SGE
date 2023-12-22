@@ -7,9 +7,7 @@ namespace Ejercicio03.Models.ViewModels
     public class clsPersonaDepartamento : clsPersona
     {
         #region atributos
-        clsDepartamento departamento;
-
-        
+        clsDepartamento departamento; 
         #endregion
 
         #region cosntructores

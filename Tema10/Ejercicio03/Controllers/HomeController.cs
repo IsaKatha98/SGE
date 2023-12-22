@@ -53,7 +53,6 @@ namespace Ejercicio03.Controllers
             {
               
 
-
                 int numFilasAfectadas = clsManejadoraBL.createPersonaBL(persona);
 
 
