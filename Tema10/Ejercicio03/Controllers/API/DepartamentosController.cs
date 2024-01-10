@@ -3,7 +3,7 @@ using BL;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
+// URL de mi api= "crudisasegundo/api"
 namespace Ejercicio03.Controllers.API
 {
     [Route("api/[controller]")]
@@ -12,22 +12,74 @@ namespace Ejercicio03.Controllers.API
     {
         // GET: api/<DepartamentosController>
         [HttpGet]
-        public IEnumerable<clsDepartamento> Get()
+        public IActionResult Get()
         {
-            return  clsListadoDepartamentosBL.listadoCompletoDepartamentosBL();
+            IActionResult salida;
+            List<clsDepartamento> listaDept = new List<clsDepartamento>();
+
+
+            try
+            {
+                listaDept = clsListadoDepartamentosBL.listadoCompletoDepartamentosBL();
+
+                if (listaDept.Count() == 0)
+                {
+                    salida = NoContent(); //el listado está vacío
+
+                }
+                else
+                {
+                    salida = Ok(listaDept); //hay que mandar la lista con el ActionResult.
+                }
+
+            }
+            catch (Exception e)
+            {
+                salida = BadRequest(e);
+            }
+
+            return salida;
         }
 
         // GET api/<DepartamentosController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            IActionResult salida;
+            clsDepartamento deptById = new clsDepartamento();
+
+
+            try
+            {
+                deptById = clsListadoDepartamentosBL.getDepartamentoByIdBL(id);
+
+                if (deptById == null)
+                {
+                    salida = NotFound(); //no se encuentra el departamento
+
+                }
+                else
+                {
+                    salida = Ok(deptById); //hay que mandar el departamento con el ActionResult.
+                }
+
+            }
+            catch (Exception e)
+            {
+                salida = BadRequest(e);
+            }
+
+            return salida;
         }
 
         // POST api/<DepartamentosController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] clsDepartamento dept)
         {
+            IActionResult salida=null;
+
+            return salida ;
+
         }
 
         // PUT api/<DepartamentosController>/5
