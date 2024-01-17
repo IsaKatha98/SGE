@@ -6,9 +6,18 @@
     </head>
     <body>
 
-        <h2 id ="title">Luisa Gameplays</h2>
-        <h2>ayuda</h2>
-        <input id="btnCambiar" type="button" value="cambia titulo" />
+        <label for="marca">Selecciona una marca de coche:</label>
+        <select id="marca" onchange="actualizarModelos()">
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="ford">Ford</option>
+        </select>
+    
+        <label for="modelo">Selecciona a un modelo:</label>
+        <select id="modelo">
+            <option value="">Selecciona un modelo</option>
+            
+        </select>
   
     </body>
 </html>

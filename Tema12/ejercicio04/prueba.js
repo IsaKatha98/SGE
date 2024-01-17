@@ -1,28 +1,45 @@
-var tabla;//declaramos tabla como una variabele global
+var tabla;
 
 //llama a la función inicializa al cargar la página.
 window.onload=inicializa
 
+
 //función que inicializa la tabla, esto vale para todo el documento.
 function inicializa() {
-    tabla=document.getElementById("tabla")
+    tabla=document.getElementById("tabla");
 }
 
-function cambiarTitulo() {
+//Función que recorre las celdas de una fila y devuelve un alert
+//con cada celda.
+function recorreCeldas() {
 
-    misH2=document.getElementsByTagName("h2");
-    alert ("El array"+misH2);
-    alert("La primera posicion del array"+misH2[0]);
-    misH2[0].innerHTML="Osasuna nunca se rinde";
+    var mensaje;
+    for (var i=0; i<tabla.rows.length; i++) {
+        for (var j=0; j< tabla.rows[i].length; j++) {
+            mensaje=mensaje+" "+tabla.rows[i].cells[j].innerHTML;
 
-    for (i=0; i<misH2.length;i++) {
+        }
 
-        misH2[i].innerHTML="Migue Pelate"
+        mensaje= mensaje+"\n";
     }
-    
-    miBoton= document.getElementById("btnCambiar");
 
-    miBoton.value= "Ya has cambiado";
-    miBoton.disabled=true;
+    alert(mensaje);
+}
 
+//Función que agrega una fila.
+function agregaFilas() {
+    //inserta una fila del tamaño de las filas de la tabla
+    var fila= tabla.insertRow(tabla.rows.length); 
+    //recorremos una fila según el número de celdas que hay en un fila.
+    for (var i=0; i<tabla.rows[i].cells.length; i++) {
+        //añadimos una celda en la posición en la que estamos.
+        fila.insertCell(i).innerHTML="Celda"+ tabla.rows.length +(i+1);
+    }
+
+}
+
+//Función que borra la última fila.
+function borraFilas() {
+   
+    tabla.deleteRow(tabla.rows.length-1);
 }
