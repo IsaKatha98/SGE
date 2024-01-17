@@ -12,7 +12,7 @@ function guardarPersona() {
    //instancio un objeto Persona.
    var p = new Persona(nombre, apellidos);
 
-   alert(p.nombre+""+ p.apellidos)
+   alert(p.nombre+" "+p.apellidos)
 }
 
 class Persona {

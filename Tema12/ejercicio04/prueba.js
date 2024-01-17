@@ -1,7 +1,11 @@
-window.onload=inicializaEventos
+var tabla;//declaramos tabla como una variabele global
 
-function inicializaEventos() {
-    document.getElementById("btnCambiar").addEventListener("click", cambiarTitulo, false)
+//llama a la función inicializa al cargar la página.
+window.onload=inicializa
+
+//función que inicializa la tabla, esto vale para todo el documento.
+function inicializa() {
+    tabla=document.getElementById("tabla")
 }
 
 function cambiarTitulo() {
