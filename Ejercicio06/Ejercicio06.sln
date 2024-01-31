@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJAX_API", "AJAX_API\AJAX_API.csproj", "{D15679A2-C6E9-44AC-87A5-AE828E087D27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F03DA043-29D4-45FC-8CC1-1E68354E8D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{F5CE84C9-CC68-48FB-A11D-D4374DC4260C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D15679A2-C6E9-44AC-87A5-AE828E087D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15679A2-C6E9-44AC-87A5-AE828E087D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15679A2-C6E9-44AC-87A5-AE828E087D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15679A2-C6E9-44AC-87A5-AE828E087D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03DA043-29D4-45FC-8CC1-1E68354E8D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03DA043-29D4-45FC-8CC1-1E68354E8D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03DA043-29D4-45FC-8CC1-1E68354E8D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03DA043-29D4-45FC-8CC1-1E68354E8D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5CE84C9-CC68-48FB-A11D-D4374DC4260C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5CE84C9-CC68-48FB-A11D-D4374DC4260C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5CE84C9-CC68-48FB-A11D-D4374DC4260C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5CE84C9-CC68-48FB-A11D-D4374DC4260C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {519C429D-E2A6-45D7-94AB-C9BDDDFD47B3}
+	EndGlobalSection
+EndGlobal
