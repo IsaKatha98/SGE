@@ -1,0 +1,15 @@
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\bin\Release\net7.0\DAL.deps.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\bin\Release\net7.0\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\bin\Release\net7.0\DAL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\bin\Release\net7.0\Entities.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\bin\Release\net7.0\Entities.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.csproj.AssemblyReference.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.AssemblyInfo.cs
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.csproj.CopyComplete
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\refint\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\DAL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\Ejercicio06_Tema13\DAL\obj\Release\net7.0\ref\DAL.dll
