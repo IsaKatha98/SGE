@@ -7,25 +7,25 @@ namespace AJAX_API.Controllers.API
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ModelosController : Controller
+    public class ModelosController : ControllerBase
     {
         // GET: api/<MarcasController>
         [HttpGet]
         public IActionResult Get()
         {
             IActionResult salida;
-            List<clsMarcas> listaMarcas = new List<clsMarcas>();
+            List<clsModelos> listaModelos = new List<clsModelos>();
 
             try
             {
-                listaMarcas = clsListadoMarcasDAL.getListadoMarcasDAL();
-                if (listaMarcas.Count() == 0)
+                listaModelos = clsListadoModelosDAl.getListadoModelosDAL();
+                if (listaModelos.Count() == 0)
                 {
                     salida = NoContent(); //el listado está vacío.
                 }
                 else
                 {
-                    salida = Ok(listaMarcas); //mandamos la lista
+                    salida = Ok(listaModelos); //mandamos la lista
                 }
             }
             catch (Exception ex)

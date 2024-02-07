@@ -16,7 +16,7 @@ function saludar() {
     let miLLamada= new XMLHttpRequest();
     let divMensaje= document.getElementById("mensaje");
 
-    miLLamada.open("GET", "https://crudnervion.azurewebsites.net/api/personas");
+    miLLamada.open("GET", "https://crudisasegundo.azurewebsites.net/api/personas");
 
     miLLamada.onreadystatechange= function() {
 

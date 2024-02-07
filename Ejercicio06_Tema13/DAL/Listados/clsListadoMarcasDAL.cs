@@ -22,7 +22,7 @@ namespace DAL.Listados
                 //abrimos la conexion y la guardamos en una variable
                 SqlConnection conexionAbierta = conexion.getConnection();
 
-                cmd.CommandText = "Select * from departamentos";
+                cmd.CommandText = "Select * from marcas";
                 cmd.Connection = conexionAbierta;
 
                 reader = cmd.ExecuteReader();
