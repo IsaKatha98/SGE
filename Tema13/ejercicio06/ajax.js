@@ -3,8 +3,6 @@ window.onload=inicializa; //no podemos llamar a la función directamente porque 
 var listaMarcas=document.getElementById("marca")
 let button= document.getElementById("btnGuardar");
 
-
-
 function inicializa() {
 
     //llamamos a pedir marcas
@@ -43,7 +41,7 @@ function pedirMarcas() {
                 for (var i=0; i<data.length; i++){
                     
                     //asociamos la marca al data.
-                    marca= data[i];
+                    var marca= data[i];
                     let opcion= document.createElement('option');// hay que crear un option por cada vuelta del for.
                     opcion.value=marca.idMarca; //asigna el valor de la marca
                     opcion.text= marca.nombre; //asigna el tecto de la marca
@@ -82,6 +80,9 @@ function pedirModelos() {
                 //parseamos la respuesta json
                 let listaModelos=JSON.parse(getModelos.responseText);
 
+                //creamos una lista de modelos seleccionados.
+                var listaModelosSelec=[]
+
                 //creamos un elemento h2 que será un título.
                 var titulo=document.createElement('h2');
                 titulo.textContent="Modelos";
@@ -95,6 +96,9 @@ function pedirModelos() {
                 var modelo=listaModelos[i];
                 if (modelo.idMarca==idMarca){
 
+                    //añadimos el modelo a la lista de modelos seleccionados.
+                    listaModelosSelec.appendChild(modelo)
+
                     //pintamos el label y el input de cada modelo.
                     var modeloNombre= document.createElement('label')
                     var modeloPrecio= document.createElement('input')
@@ -103,20 +107,16 @@ function pedirModelos() {
                     //creamos un salto de línea
                     // Crea un elemento <br> para representar un salto de línea
                     var saltoDeLinea = document.createElement('br');
-
-                    
-
-                   
+                
                     document.body.appendChild(modeloNombre);
                     document.body.appendChild(modeloPrecio);
                     document.body.appendChild(saltoDeLinea);
 
-                    
-
                     modeloNombre.textContent=modelo.nombre;
                     modeloPrecio.value=modelo.precio;
-                }
 
+
+                }
 
                }
         }
@@ -127,5 +127,16 @@ function pedirModelos() {
 }
 
 function guardarCambios() {
+
+    //coger los elementos donde se pueden cambiar cosas
+    var precioModificados=[]
+
+
+
+
+    //comparar si son distintos a los precios que ya existían en la api.
+
+    //mandar los elementos modificados.
+
 
 }
