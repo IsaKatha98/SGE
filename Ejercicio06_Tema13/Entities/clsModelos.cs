@@ -34,6 +34,7 @@ namespace Entities
         #endregion
 
         #region propiedades
+
         public int IdModelo
         {
             get { return this.idModelo; }

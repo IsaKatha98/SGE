@@ -9,7 +9,7 @@ namespace AJAX_API.Controllers.API
     [ApiController]
     public class ModelosController : ControllerBase
     {
-        // GET: api/<MarcasController>
+        // GET: api/<ModelosController>
         [HttpGet]
         public IActionResult Get()
         {
@@ -36,16 +36,51 @@ namespace AJAX_API.Controllers.API
             return salida;
         
     }
+        [Route("byMarca/{idMarca}")]
+        //GET:api/<ModelosPorIdMarcaController>/idMarca
+        [HttpGet]
+        public IActionResult Get(int idMarca) {
+
+            IActionResult salida;
+            List<clsModelos> listaModelosByIdMarca= new List<clsModelos>();
+
+            try
+            {
+                listaModelosByIdMarca = clsListadoModelosDAl.getListadoModelosByIdMarcaDAL(idMarca);
+
+                if (listaModelosByIdMarca.Count() == 0)
+                {
+                    salida = NoContent(); //el listado está vacío.
+                }
+                else
+                {
+                    salida = Ok(listaModelosByIdMarca); //mandamos la lista
+
+                }
+
+            } catch (Exception ex)
+            {
+                salida = BadRequest(ex.Message);
+            }
+
+            return salida;
+        
+        }
+
+
+
+
         // PUT: ModelosController/Edit/5
+        [Route("{idModelo}")]
         [HttpPut]
-        public IActionResult Put(int idModelo, int precio)
+        public IActionResult Put(int idModelo, clsModelos modelo)
         {
             IActionResult salida;
             int numFilasAfectadas = 0;
 
             try
             {
-                numFilasAfectadas = HandlerModelosDAL.updatePrecioModeloDAL(idModelo, precio);
+                numFilasAfectadas = HandlerModelosDAL.updatePrecioModeloDAL(modelo.IdModelo, modelo.Precio);
 
                 if (numFilasAfectadas == 0)
                 {

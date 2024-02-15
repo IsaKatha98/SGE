@@ -1,7 +1,12 @@
 window.onload=inicializa; //no podemos llamar a la función directamente porque se ejectuaría
 
 var listaMarcas=document.getElementById("marca")
-let button= document.getElementById("btnGuardar");
+var button= document.getElementById("btnGuardar");
+var listaModelos=[]
+
+//declaramos el div.
+var divModelos=document.getElementById("divModelos");
+
 
 function inicializa() {
 
@@ -60,13 +65,13 @@ function pedirModelos() {
 
     //guardamos la opción elegida en una variable
     var marca = listaMarcas.options[listaMarcas.selectedIndex].text;
-    var idMarca=listaMarcas.options[listaMarcas.selectedIndex].value;
+    var idMarca=listaMarcas.value;
 
     alert("pedimos los modelos:"+marca); //esto funciona
 
     let getModelos= new XMLHttpRequest();
     
-    getModelos.open("GET", "https://ajaxej6.azurewebsites.net/api/modelos");
+    getModelos.open("GET", "https://ajaxej6.azurewebsites.net/api/modelos/byMarca/"+idMarca);
 
     //definimos los estados
     getModelos.onreadystatechange= function() {
@@ -78,65 +83,114 @@ function pedirModelos() {
                 
                 //Técnicamente, aquí hay que rellenar el listado y la vista.
                 //parseamos la respuesta json
-                let listaModelos=JSON.parse(getModelos.responseText);
+                listaModelos=JSON.parse(getModelos.responseText);
 
-                //creamos una lista de modelos seleccionados.
-                var listaModelosSelec=[]
-
-                //creamos un elemento h2 que será un título.
-                var titulo=document.createElement('h2');
-                titulo.textContent="Modelos";
-                document.body.appendChild(titulo)
-
-
-               //ahora tenemos que filtrar listaModelos por el id de la marca seleccionada.
-               //ese id está guardado en el option
-               for (var i=0; i<listaModelos.length;i++) {
-
-                var modelo=listaModelos[i];
-                if (modelo.idMarca==idMarca){
-
-                    //añadimos el modelo a la lista de modelos seleccionados.
-                    listaModelosSelec.appendChild(modelo)
-
-                    //pintamos el label y el input de cada modelo.
-                    var modeloNombre= document.createElement('label')
-                    var modeloPrecio= document.createElement('input')
-
-                   
-                    //creamos un salto de línea
-                    // Crea un elemento <br> para representar un salto de línea
-                    var saltoDeLinea = document.createElement('br');
+               crearSelectModelos ()
                 
-                    document.body.appendChild(modeloNombre);
-                    document.body.appendChild(modeloPrecio);
-                    document.body.appendChild(saltoDeLinea);
-
-                    modeloNombre.textContent=modelo.nombre;
-                    modeloPrecio.value=modelo.precio;
-
-
-                }
-
-               }
         }
+
     };
 
     getModelos.send();
 
 }
 
+
+function crearSelectModelos() {
+
+     //primero tenemos que borrar todos los hijos del div.
+     divModelos.innerHTML="" 
+
+    //creamos un elemento h2 que será un título.
+    var titulo=document.createElement('h2');
+    titulo.textContent="Modelos";
+    divModelos.appendChild(titulo)
+
+   //ahora tenemos que filtrar listaModelos por el id de la marca seleccionada.
+   //ese id está guardado en el option
+   for (var i=0; i<listaModelos.length;i++) {
+
+    
+    var modelo=listaModelos[i];
+    
+
+        //pintamos el label y el input de cada modelo.
+        var modeloNombre= document.createElement('label')
+        var modeloPrecio= document.createElement('input')
+
+       
+        //creamos un salto de línea
+        // Crea un elemento <br> para representar un salto de línea
+        var saltoDeLinea = document.createElement('br');
+
+        //damos valor a los elementos.
+        modeloNombre.textContent=modelo.nombre;
+        modeloPrecio.value=modelo.precio;
+        modeloPrecio.id=modelo.idModelo;
+        modeloPrecio.name='precioDelModelo';
+        
+
+        //añadimos los elementos al div
+        divModelos.appendChild(modeloNombre);
+        divModelos.appendChild(modeloPrecio);
+        divModelos.appendChild(saltoDeLinea);
+
+        
+
+   }
+}
+
 function guardarCambios() {
 
-    //coger los elementos donde se pueden cambiar cosas
-    var precioModificados=[]
+   var modelosModificado= divModelos.querySelectorAll('[name="precioDelModelo"]')
+
+   for (var i=0;i<modelosModificado.length;i++) {
+
+        if (modelosModificado[i].value!=listaModelos[i].precio) {
+            //Tenias puesto modeloModificado[i].modelo.precio
+            //modeloModificado[i] ya es un modelo
+
+            //En vez de hacer un Put por cada uno que sea diferente
+            //mira a ver si lo puedes meter en un array (modificarArray)
+            //y haces put de eso
+
+            var miLLamada= new XMLHttpRequest();
+
+            miLLamada.open("PUT","https://ajaxej6.azurewebsites.net/api/modelos/"+modelosModificado[i].id);
+
+            miLLamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+            var json=JSON.stringify(modelosModificado[i]);
+
+                miLLamada.onreadystatechange=function() {
+
+                    if(miLLamada.readyState<4) {
+
+                    } else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
+                    
+                        alert("Precio modificado");
+
+                    }
+
+                    //Tienes que borrar los modelos anteriores q se t lia
+                    //Prueba a seleccionar todas las marcas y vas a ver como se apilan
+                    //T recomiendo crear un div en el html y ponerle un id
+                    //Cada vez q se seleccione una marca, se borra el contenido del div y se crea uno nuevo
+                    //Lo tienes casi hecho
+                    //Animo Animo :D
+                
 
 
+            };
 
 
-    //comparar si son distintos a los precios que ya existían en la api.
+        
+        miLLamada.send(json);
+
+    }
+
+     //comparar si son distintos a los precios que ya existían en la api.
 
     //mandar los elementos modificados.
-
-
+}
 }
