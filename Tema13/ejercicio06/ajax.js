@@ -154,19 +154,19 @@ function guardarCambios() {
             //mira a ver si lo puedes meter en un array (modificarArray)
             //y haces put de eso
 
-            var miLLamada= new XMLHttpRequest();
+            var modificarPrecio= new XMLHttpRequest();
 
-            miLLamada.open("PUT","https://ajaxej6.azurewebsites.net/api/modelos/"+modelosModificado[i].id);
+            modificarPrecio.open("PUT","https://ajaxej6.azurewebsites.net/api/modelos/"+modelosModificado[i].id);
 
-            miLLamada.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            modificarPrecio.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
             var json=JSON.stringify(modelosModificado[i]);
 
-                miLLamada.onreadystatechange=function() {
+                modificarPrecio.onreadystatechange=function() {
 
-                    if(miLLamada.readyState<4) {
+                    if(modificarPrecio.readyState<4) {
 
-                    } else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
+                    } else if (modificarPrecio.readyState == 4 && modificarPrecio.status == 200) {
                     
                         alert("Precio modificado");
 
@@ -185,7 +185,7 @@ function guardarCambios() {
 
 
         
-        miLLamada.send(json);
+        modificarPrecio.send(json);
 
     }
 
