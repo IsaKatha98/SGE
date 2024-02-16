@@ -55,9 +55,7 @@ function pedirMarcas() {
             };
         }
     };
-
     miLLamada.send();
-
 }
 
 

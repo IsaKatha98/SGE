@@ -73,14 +73,14 @@ namespace AJAX_API.Controllers.API
         // PUT: ModelosController/Edit/5
         [Route("{idModelo}")]
         [HttpPut]
-        public IActionResult Put(int idModelo, clsModelos modelo)
+        public IActionResult Put(int idModelo,[FromBody] clsModelos modelo)
         {
             IActionResult salida;
             int numFilasAfectadas = 0;
 
             try
             {
-                numFilasAfectadas = HandlerModelosDAL.updatePrecioModeloDAL(modelo.IdModelo, modelo.Precio);
+                numFilasAfectadas = HandlerModelosDAL.updatePrecioModeloDAL(idModelo, modelo.Precio);
 
                 if (numFilasAfectadas == 0)
                 {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fbo56NSbhpziETAY8M7PJNnskORI9dkdxPVISkwxTGc=",
+  "Hash": "RwmvZgcHop3dugUDghHUpNeqs1LOAsSQBPWaJtQ+xKE=",
   "Source": "AJAX_API",
   "BasePath": "_content/AJAX_API",
   "Mode": "Default",
@@ -34,23 +34,6 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\favicon.ico",
-      "SourceId": "AJAX_API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\",
-      "BasePath": "_content/AJAX_API",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
       "Identity": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\index.html",
       "SourceId": "AJAX_API",
       "SourceType": "Discovered",
@@ -68,12 +51,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\js\\ajax.js",
       "SourceId": "AJAX_API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\",
       "BasePath": "_content/AJAX_API",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/ajax.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\ajax.js"
     },
     {
       "Identity": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

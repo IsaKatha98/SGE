@@ -5,16 +5,12 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\js\\ajax.js",
+      "PackagePath": "staticwebassets\\js\\ajax.js"
     },
     {
       "Id": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -2121,23 +2121,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IsaK\\.nuget\\packages\\": {},
+    "C:\\Users\\ikloerzer\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\AJAX_API.csproj",
+      "projectUniqueName": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\AJAX_API.csproj",
       "projectName": "AJAX_API",
-      "projectPath": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\AJAX_API.csproj",
-      "packagesPath": "C:\\Users\\IsaK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\obj\\",
+      "projectPath": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\AJAX_API.csproj",
+      "packagesPath": "C:\\Users\\ikloerzer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\AJAX_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\IsaK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ikloerzer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2153,11 +2153,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\DAL\\DAL.csproj"
+            "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\IsaK\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\Entities\\Entities.csproj"
+            "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ikloerzer\\Documents\\GitHub\\SGE\\Ejercicio06_Tema13\\Entities\\Entities.csproj"
             }
           }
         }
@@ -2190,7 +2190,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

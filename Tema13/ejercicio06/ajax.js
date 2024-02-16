@@ -160,7 +160,11 @@ function guardarCambios() {
 
             modificarPrecio.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
-            var json=JSON.stringify(modelosModificado[i]);
+            //Machacamos el precio del modelo que queremos enviar.
+            listaModelos[i].precio=modelosModificado[i].value
+            
+
+            var json=JSON.stringify(listaModelos[i]);
 
                 modificarPrecio.onreadystatechange=function() {
 
