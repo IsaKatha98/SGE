@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <!--es mejor que la referencia esté lo más arriba posible-->
+        <script defer src="ajax.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css.css"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div class="container">
+                <h2>People</h2>
+                <button type="button" id="btnNew" class="btn btn-primary btn-md pull btn-sm">New</button>
+                <button type="button" id="btnEdit" class="btn btn-primary btn-md pull btn-sm" >Edit</button>
+                <button type="button" id="btnDelete" class="btn btn-primary btn-md pull btn-sm" >Delete</button>
+                <table class="table" id="maintable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>Pîc</th>
+                            <th>Birth Date</th>
+                            <th>DepartmentID</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows">
+                        
+                    </tbody>
+                </table>
+               
+            </div>
+        </form>
+    </body>
+</html>
