@@ -2,7 +2,6 @@
     <head>
         <!--es mejor que la referencia esté lo más arriba posible-->
         <script defer src="ajax.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css.css"/>
 
     </head>
@@ -22,7 +21,7 @@
                             <th>Phone Number</th>
                             <th>Pic</th>
                             <th>Birth Date</th>
-                            <th>DepartmentID</th>
+                            <th>Department</th>
                         </tr>
                     </thead>
                     <tbody id="rows">
@@ -32,5 +31,29 @@
                
             </div>
         </form>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h1>Edit</h1>
+                <span class="close">&times;</span>
+                <label>Name</label>
+                <input id="inputName"></input>
+                <label>Surname</label>
+                <input id="inputSurname"></input>
+                <label>Address</label>
+                <input id="inputAddress"></input>
+                <label>Phone Number</label>
+                <input id="inputPhoneNumber"></input>
+                <label>Pic</label>
+                <input id="inputPic"></input>
+                <label>Birthday</label>
+                <input type="date" id="inputBirthday"></input>
+                <label>Department</label>
+                <input id="inputDepartment"></input>
+
+                <button id="btnSave">Save changes</button>
+                
+            </div>        
+        </div>
     </body>
 </html>

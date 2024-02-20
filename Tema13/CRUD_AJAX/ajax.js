@@ -50,9 +50,15 @@ var buttonEdit= document.getElementById("btnEdit");
 var buttonDelete= document.getElementById("btnDelete");
 var rowsPeople= document.getElementById("rows"); //tbody
 var listDept=[] //variable that saves a list of departments
+var listPeople=[];
 
 let beforeRow;
 
+//gets the div that's going to be our modal.
+var modal=document.getElementById("myModal");
+
+//gets the span element that closes the modal.
+var span=document.getElementsByClassName("close")[0];
 
 function first() {
 
@@ -65,11 +71,6 @@ function first() {
         rowsPeople.addEventListener("click", (selected)=>{
             const row= selected.target.closest("tr");
 
-            //shows the buttons
-            buttonEdit.style.visibility="visible";
-            buttonDelete.style.visibility="visible";
-           
-
             if (row){
                 if (beforeRow){
 
@@ -78,6 +79,18 @@ function first() {
 
                 beforeRow=row;
                 row.style.backgroundColor="#CBC8C8";
+            }
+
+            //get the person from the list that matches ther row's id.
+            for (var i=0;i<listPeople.length;i++) {
+                
+                if (row.id==listPeople[i].id) {
+
+                    //when it finds the person.
+                    //calls the edit function and sends the data in the row.
+                    edit(listPeople[i]);
+
+                }
             }
         }, false);
     //edit and delete buttons will be hidden
@@ -123,6 +136,9 @@ function getsIndex () {
             //creates a row for every person in the list.
             var newRow=rowsPeople.insertRow();
 
+            //each row will have as it's own id the id of a Person.
+            newRow.id=oPersona.id;
+
             //creates a cell for every property a person has.
             var cellName=newRow.insertCell(0);
             var cellSurname=newRow.insertCell(1);
@@ -147,6 +163,9 @@ function getsIndex () {
             cellPic.appendChild(img);
             cellBirthDate.innerHTML=oPersona.fechaNac;
             cellDept.innerHTML=oPersona.nombreDepartamento;
+
+            //we add this object to listPeople.
+            listPeople.push(oPersona);
 
             
         }
@@ -197,11 +216,49 @@ function getsDeptList () {
    
 }
 
-function selected(oPersona) {
+function edit(oPersona) {
 
-    //saves the selected person.
- 
-    //gets the selected person.
-    alert("Se ha seleccionado una persona:", oPersona);
+    //opens the modal.
+    modal.style.display="block";
 
+    //get all the elements.
+    var inputName=document.getElementById("inputName");
+    var inputSurname=document.getElementById("inputSurname");
+    var inputAddress=document.getElementById("inputAddress");
+    var inputPhoneNumber=document.getElementById("inputPhoneNumber");
+    var inputPic=document.getElementById("inputPic");
+    var inputBirthday=document.getElementById("inputBirthday");
+    var inputDepartment=document.getElementById("inputDepartment");
+
+    //give them value.
+    inputName.value=oPersona.nombre;
+    inputSurname.value=oPersona.apellidos;
+    inputAddress.value=oPersona.direccion;
+    inputPic.value=oPersona.fotoURL;
+    inputPhoneNumber.value=oPersona.tlf;
+    inputBirthday.value=oPersona.fechaNac;
+    inputDepartment.value=oPersona.nombreDepartamento;
+
+    //get btnSave
+    var btnSave=document.getElementById("btnSave");
+
+    //calls function saveChanges when btn clicked
+    btnSave.onclick=saveChanges();
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+  }
+
+}
+
+function saveChanges() {
+    
 }
