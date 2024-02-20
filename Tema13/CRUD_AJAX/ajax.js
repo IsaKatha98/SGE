@@ -24,8 +24,8 @@ class Persona{
 }
 
 class Departamento {
-    constructor (id, nombre) {
-        this.id=id;
+    constructor (idDepartamento, nombre) {
+        this.idDepartamento=idDepartamento;
         this.nombre=nombre;
     }
 }
@@ -39,7 +39,7 @@ class PersonaconnombreDepartamento extends Persona{
 
             if (p.idDepartamento==listDept[i].idDepartamento) {
                 
-                nombreDepartamento=listaDept[i].nombre;
+                nombreDepartamento=listDept[i].nombre;
                 break;
             }
         }
@@ -126,8 +126,7 @@ function getsIndex () {
     
     //if there are errors.
     .catch(error=>{
-
-
+        //throw new Error("Not working", error);
     })
 
 }
@@ -154,7 +153,7 @@ function getsDeptList () {
         .then(data => {
    
             //resolves promise
-            listDept=data;
+            listDept=data.map(dept => new Departamento(dept.idDepartamento, dept.nombre));
             resolve();
         })
         
