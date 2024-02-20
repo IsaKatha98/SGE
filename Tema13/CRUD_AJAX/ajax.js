@@ -1,12 +1,3 @@
-window.onload=first;
-
-var tablePeople=document.getElementById("maintable")
-var buttonNew= document.getElementById("btnNew");
-var buttonEdit= document.getElementById("btnEdit");
-var buttonDelete= document.getElementById("btnDelete");
-var rowsPeople= document.getElementById("rows"); //tbody
-var newRow=document.getElementsByTagName("tr");
-var listDept=[] //variable that saves a list of departments
 
 //classes
 class Persona{
@@ -51,6 +42,18 @@ class PersonaconnombreDepartamento extends Persona{
 
 }
 
+window.onload=first;
+
+var tablePeople=document.getElementById("maintable")
+var buttonNew= document.getElementById("btnNew");
+var buttonEdit= document.getElementById("btnEdit");
+var buttonDelete= document.getElementById("btnDelete");
+var rowsPeople= document.getElementById("rows"); //tbody
+var listDept=[] //variable that saves a list of departments
+
+let beforeRow;
+
+
 function first() {
 
     //load the list of departments
@@ -59,13 +62,30 @@ function first() {
     .then(()=>{
         getsIndex();
 
-        //each row can be clicked
-        rowsPeople.addEventListener("click", selected, false);
-        //edit and delete buttons will be hidden
+        rowsPeople.addEventListener("click", (selected)=>{
+            const row= selected.target.closest("tr");
+
+            //shows the buttons
+            buttonEdit.style.visibility="visible";
+            buttonDelete.style.visibility="visible";
+           
+
+            if (row){
+                if (beforeRow){
+
+                    beforeRow.style.backgroundColor="";
+                }
+
+                beforeRow=row;
+                row.style.backgroundColor="#CBC8C8";
+            }
+        }, false);
+    //edit and delete buttons will be hidden
     //these buttons will only show when a person is selected
-    buttonDelete.style.display="none";
-    buttonEdit.style.display="none";
+    buttonDelete.style.visibility="hidden";
+    buttonEdit.style.visibility="hidden";
     })
+
     .catch(error=>{
         console.error("Error fetching department list:", error);
     })
@@ -108,7 +128,11 @@ function getsIndex () {
             var cellSurname=newRow.insertCell(1);
             var cellAddress=newRow.insertCell(2);
             var cellPhone= newRow.insertCell(3);
+            //this cell is going to be an img, so we need an element type img.
             var cellPic= newRow.insertCell(4);
+            var img=document.createElement('img'); 
+            img.width=80;
+            img.height=80;
             var cellBirthDate= newRow.insertCell(5);
             var cellDept=newRow.insertCell(6);
 
@@ -117,11 +141,15 @@ function getsIndex () {
             cellSurname.innerHTML=oPersona.apellidos;
             cellAddress.innerHTML=oPersona.direccion;
             cellPhone.innerHTML=oPersona.tlf;
-            cellPic.innerHTML=oPersona.fotoURL;
+            //we get the src of img.
+            img.src=oPersona.fotoURL;
+            //we append the pic as a child of cellPic.
+            cellPic.appendChild(img);
             cellBirthDate.innerHTML=oPersona.fechaNac;
             cellDept.innerHTML=oPersona.nombreDepartamento;
+
+            
         }
-        
     })
     
     //if there are errors.
@@ -169,21 +197,11 @@ function getsDeptList () {
    
 }
 
+function selected(oPersona) {
 
-
-function selected() {
-
+    //saves the selected person.
+ 
     //gets the selected person.
-    alert("Se ha seleccionado una persona")
-
-    const row=selected.target.closest("tr");
-
-    if (row) {
-        if (beforeSelectedRow) {
-            beforeSelectedRow.style.backgroundColor="";
-        }
-        beforeSelectedRow=row;
-        row.style.backgroundColor="#CBC8C8";
-    }
+    alert("Se ha seleccionado una persona:", oPersona);
 
 }
