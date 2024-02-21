@@ -107,7 +107,8 @@ namespace Ejercicio03.Controllers.API
         }
 
         // PUT api/<PersonasController>/5
-        [HttpPut("{id}")]
+        [Route("id")]
+        [HttpPut]
         public IActionResult Put([FromBody] clsPersona persona)
         {
 
