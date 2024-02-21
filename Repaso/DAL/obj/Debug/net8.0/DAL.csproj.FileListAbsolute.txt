@@ -1,0 +1,16 @@
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\bin\Debug\net8.0\DAL.deps.json
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\bin\Debug\net8.0\DAL.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\bin\Debug\net8.0\DAL.pdb
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\bin\Debug\net8.0\Entities.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\bin\Debug\net8.0\Entities.pdb
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.csproj.CopyComplete
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\refint\DAL.dll
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\DAL.pdb
+C:\Users\IsaK\Documents\GitHub\SGE\Repaso\DAL\obj\Debug\net8.0\ref\DAL.dll

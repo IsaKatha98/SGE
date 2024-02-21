@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepasoAPI", "RepasoAPI\RepasoAPI.csproj", "{F5C6B90A-CD52-4BD6-94EF-57D6E4E70ABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{34F98E78-16D5-4685-9E8B-409A0A192F1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{EB7CFB9E-A326-474C-B927-F8BAFB041A7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5C6B90A-CD52-4BD6-94EF-57D6E4E70ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C6B90A-CD52-4BD6-94EF-57D6E4E70ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C6B90A-CD52-4BD6-94EF-57D6E4E70ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C6B90A-CD52-4BD6-94EF-57D6E4E70ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F98E78-16D5-4685-9E8B-409A0A192F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F98E78-16D5-4685-9E8B-409A0A192F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F98E78-16D5-4685-9E8B-409A0A192F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F98E78-16D5-4685-9E8B-409A0A192F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB7CFB9E-A326-474C-B927-F8BAFB041A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB7CFB9E-A326-474C-B927-F8BAFB041A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB7CFB9E-A326-474C-B927-F8BAFB041A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB7CFB9E-A326-474C-B927-F8BAFB041A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23417F06-34A7-4D42-8135-40D073DD732B}
+	EndGlobalSection
+EndGlobal

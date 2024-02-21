@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AJAX_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37157b4c42b07839b1370d602ba5ef059d4fa1f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AJAX_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AJAX_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
