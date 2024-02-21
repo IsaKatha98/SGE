@@ -1,16 +1,15 @@
 
 //classes
 class Persona{
-
-    constructor (p) {
-        this.id=p.id;
-        this.nombre=p.nombre;
-        this.apellidos=p.apellidos;
-        this.direccion=p.direccion;
-        this.tlf=p.tlf;
-        this.fotoURL=p.fotoURL;
-        this.fechaNac=p.fechaNac;
-        this.idDepartamento=p.idDepartamento;
+    constructor (id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento) {
+        this.id=id;
+        this.nombre=nombre;
+        this.apellidos=apellidos;
+        this.direccion=direccion;
+        this.tlf=tlf;
+        this.fotoURL=fotoURL;
+        this.fechaNac=fechaNac;
+        this.idDepartamento=idDepartamento;
     }
 }
 
@@ -22,13 +21,12 @@ class Departamento {
 }
 
 class PersonaconnombreDepartamento extends Persona{
-
-    constructor(p){
+    constructor (id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento) {
         let nombreDepartamento="Departamento no asignado";
-        super(p);
+        super(id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento);
         for (var i=0; i<listDept.length;i++) {
 
-            if (p.idDepartamento==listDept[i].idDepartamento) {
+            if (idDepartamento==listDept[i].idDepartamento) {
                 
                 nombreDepartamento=listDept[i].nombre;
                 break;
@@ -36,8 +34,7 @@ class PersonaconnombreDepartamento extends Persona{
         }
 
         this.nombreDepartamento=nombreDepartamento;
-        
-        
+              
     } 
 
 }
@@ -46,8 +43,6 @@ window.onload=first;
 
 var tablePeople=document.getElementById("maintable")
 var buttonNew= document.getElementById("btnNew");
-var buttonEdit= document.getElementById("btnEdit");
-var buttonDelete= document.getElementById("btnDelete");
 var rowsPeople= document.getElementById("rows"); //tbody
 var listDept=[] //variable that saves a list of departments
 var listPeople=[];
@@ -93,10 +88,7 @@ function first() {
                 }
             }
         }, false);
-    //edit and delete buttons will be hidden
-    //these buttons will only show when a person is selected
-    buttonDelete.style.visibility="hidden";
-    buttonEdit.style.visibility="hidden";
+  
     })
 
     .catch(error=>{
@@ -131,13 +123,14 @@ function getsIndex () {
         for (var i=0; i<data.length;i++) {
 
             //creates a person
-            var oPersona= new PersonaconnombreDepartamento(data[i])
+            var oPersona= new PersonaconnombreDepartamento(data[i].id, data[i].nombre, data[i].apellidos, data[i].direccion, data[i].tlf, data[i].fotoURL, data[i].fechaNac, data[i].idDepartamento)
              
             //creates a row for every person in the list.
             var newRow=rowsPeople.insertRow();
 
             //each row will have as it's own id the id of a Person.
             newRow.id=oPersona.id;
+           
 
             //creates a cell for every property a person has.
             var cellName=newRow.insertCell(0);
@@ -220,7 +213,6 @@ function edit(oPersona) {
 
     //opens the modal.
     modal.style.display="block";
-
     //get all the elements.
     var inputName=document.getElementById("inputName");
     var inputSurname=document.getElementById("inputSurname");
@@ -228,7 +220,8 @@ function edit(oPersona) {
     var inputPhoneNumber=document.getElementById("inputPhoneNumber");
     var inputPic=document.getElementById("inputPic");
     var inputBirthday=document.getElementById("inputBirthday");
-    var inputDepartment=document.getElementById("inputDepartment");
+    var selectDepartment=document.getElementById("selectDepartment"); //this is a select
+    var optionSelected=document.getElementById("optionNameDept")
 
     //give them value.
     inputName.value=oPersona.nombre;
@@ -237,13 +230,28 @@ function edit(oPersona) {
     inputPic.value=oPersona.fotoURL;
     inputPhoneNumber.value=oPersona.tlf;
     inputBirthday.value=oPersona.fechaNac;
-    inputDepartment.value=oPersona.nombreDepartamento;
+    optionSelected.value=oPersona.idDepartamento;
+    optionSelected.text=oPersona.nombreDepartamento;
+
+        //for selectDepartment, we need options from a list
+        for (var i=0; i<listDept.length; i++) {
+        
+            if (listDept[i].idDepartamento!=optionSelected.value) {
+                let option= document.createElement('option');
+                option.value=listDept[i].idDepartamento;
+                option.text=listDept[i].nombre;
+                selectDepartment.appendChild(option);
+
+            }         
+        }
 
     //get btnSave
     var btnSave=document.getElementById("btnSave");
 
     //calls function saveChanges when btn clicked
-    btnSave.onclick=saveChanges();
+    btnSave.onclick=function(){
+        saveChanges(oPersona);
+    };
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
@@ -259,6 +267,37 @@ function edit(oPersona) {
 
 }
 
-function saveChanges() {
-    
+function saveChanges(oPersona) {
+
+    //we get an array of inputs from one specific row.
+    var arrayInput= modal.querySelectorAll('[name=edit]');
+
+     //cast oPersona to type Persona
+     var personModified= new Persona(oPersona.id, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value,  arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, arrayInput[6].value);
+
+    var url="https://crudisasegundo.azurewebsites.net/api/personas/"+oPersona.id;
+
+    var modifyRequest= new XMLHttpRequest();
+
+    modifyRequest.open("PUT", url);
+    modifyRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    var json=JSON.stringify(personModified);
+
+    modifyRequest.onreadystatechange=function(){
+
+        if(modifyRequest.readyState>4) {
+
+        } else if (modifyRequest.readyState==4&&modifyRequest.status==200) {
+              //closes the modal
+              var message= document.createElement('p');
+              message.innerHTML="Persona modificada con éxito";
+              modal.appendChild(message);
+  
+  
+              //reloads page
+        }
+    };
+
+    modifyRequest.send(json);
 }
+

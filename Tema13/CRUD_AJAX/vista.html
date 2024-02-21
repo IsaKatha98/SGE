@@ -10,8 +10,7 @@
             <div class="container">
                 <h2>People</h2>
                 <button type="button" id="btnNew" class="btn btn-primary btn-md pull btn-sm">New</button>
-                <button type="button" id="btnEdit" class="btn btn-primary btn-md pull btn-sm" >Edit</button>
-                <button type="button" id="btnDelete" class="btn btn-primary btn-md pull btn-sm" >Delete</button>
+              
                 <table class="table" id="maintable">
                     <thead>
                         <tr>
@@ -33,23 +32,28 @@
         </form>
 
         <div id="myModal" class="modal">
+           
             <div class="modal-content">
                 <h1>Edit</h1>
                 <span class="close">&times;</span>
+            
                 <label>Name</label>
-                <input id="inputName"></input>
+                <input id="inputName" name="edit" ></input>
                 <label>Surname</label>
-                <input id="inputSurname"></input>
+                <input id="inputSurname" name="edit"></input>
                 <label>Address</label>
-                <input id="inputAddress"></input>
+                <input id="inputAddress" name="edit"></input>
                 <label>Phone Number</label>
-                <input id="inputPhoneNumber"></input>
+                <input id="inputPhoneNumber" name="edit"></input>
                 <label>Pic</label>
-                <input id="inputPic"></input>
+                <input id="inputPic" name="edit"></input>
                 <label>Birthday</label>
-                <input type="date" id="inputBirthday"></input>
+                <input type="date" id="inputBirthday" name="edit"></input>
                 <label>Department</label>
-                <input id="inputDepartment"></input>
+                <select id="selectDepartment">
+                    <option id="optionNameDept" name="edit"></option>
+                
+                </select>
 
                 <button id="btnSave">Save changes</button>
                 
