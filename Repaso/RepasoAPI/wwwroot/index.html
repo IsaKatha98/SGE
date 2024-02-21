@@ -2,6 +2,8 @@
 <head>
     <!--es mejor que la referencia esté lo más arriba posible-->
     <script defer src="js/js.js"></script>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+
 
 </head>
 <body>
@@ -19,7 +21,7 @@
                         <th>Phone Number</th>
                         <th>Pic</th>
                         <th>Birth Date</th>
-                      
+
                     </tr>
                 </thead>
                 <tbody id="rows">
@@ -29,6 +31,31 @@
         </div>
     </form>
 
-    
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <h1>Edit</h1>
+         
+
+            <label>Name</label>
+            <input id="inputName" name="edit"></input>
+            <label>Surname</label>
+            <input id="inputSurname" name="edit"></input>
+            <label>Address</label>
+            <input id="inputAddress" name="edit"></input>
+            <label>Phone Number</label>
+            <input id="inputPhoneNumber" name="edit"></input>
+            <label>Pic</label>
+            <input id="inputPic" name="edit"></input>
+            <label>Birthday</label>
+            <input type="date" id="inputBirthday" name="edit"></input>
+
+
+
+            <button id="btnSave">Save changes</button>
+
+        </div>
+    </div>
+
 </body>
 </html>

@@ -49,11 +49,25 @@ var listPeople=[];
 
 let beforeRow;
 
+ //get all the elements from the modal
+ var inputName=document.getElementById("inputName");
+ var inputSurname=document.getElementById("inputSurname");
+ var inputAddress=document.getElementById("inputAddress");
+ var inputPhoneNumber=document.getElementById("inputPhoneNumber");
+ var inputPic=document.getElementById("inputPic");
+ var inputBirthday=document.getElementById("inputBirthday");
+ var selectDepartment=document.getElementById("selectDepartment"); //this is a select
+ var optionSelected=document.getElementById("optionNameDept")
+
 //gets the div that's going to be our modal.
 var modal=document.getElementById("myModal");
 
 //gets the span element that closes the modal.
 var span=document.getElementsByClassName("close")[0];
+
+//get btnSave
+var btnSave=document.getElementById("btnSave");
+
 
 function first() {
 
@@ -62,6 +76,42 @@ function first() {
     getsDeptList()
     .then(()=>{
         getsIndex();
+
+        buttonNew.addEventListener("click", (insert)=>{
+             //opens the modal.
+            modal.style.display="block";
+
+            //for selectDepartment, we need options from a list
+            for (var i=0; i<listDept.length; i++) {
+        
+            
+                let option= document.createElement('option');
+                option.value=listDept[i].idDepartamento;
+                option.text=listDept[i].nombre;
+                selectDepartment.appendChild(option);
+
+            }
+
+             //calls function saveChanges when btn clicked
+            btnSave.onclick= function(){
+
+                
+                saveInsert();
+            };
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+
+    }
+    }, false);
 
         rowsPeople.addEventListener("click", (selected)=>{
             const row= selected.target.closest("tr");
@@ -171,6 +221,7 @@ function getsIndex () {
 
 }
 
+
 function getsDeptList () {
     return new Promise(function(resolve, reject){
 
@@ -209,20 +260,49 @@ function getsDeptList () {
    
 }
 
+function saveInsert() {
+
+    //we get an array of inputs from one specific row.
+    var arrayInput= modal.querySelectorAll('[name=edit]');
+
+    //TODO: hay problemas en recoger el idDepartamento.
+    //build an object Persona
+    var personNew= new Persona(0, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value,  arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, 2);
+
+
+      //get the url
+      var url="https://crudisasegundo.azurewebsites.net/api/personas"
+    
+     var postRequest= new XMLHttpRequest();
+ 
+     postRequest.open("POST", url);
+     postRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+     var json=JSON.stringify(personNew);
+ 
+     postRequest.onreadystatechange=function(){
+ 
+         if(postRequest.readyState>4) {
+ 
+         } else if (postRequest.readyState==4&&postRequest.status==200) {
+               //closes the modal
+               var message= document.createElement('p');
+               message.innerHTML="Persona insertada con éxito";
+               modal.appendChild(message);
+   
+   
+               //reloads page
+         }
+     };
+ 
+     postRequest.send(json);
+    
+}
+
 function edit(oPersona) {
 
     //opens the modal.
     modal.style.display="block";
-    //get all the elements.
-    var inputName=document.getElementById("inputName");
-    var inputSurname=document.getElementById("inputSurname");
-    var inputAddress=document.getElementById("inputAddress");
-    var inputPhoneNumber=document.getElementById("inputPhoneNumber");
-    var inputPic=document.getElementById("inputPic");
-    var inputBirthday=document.getElementById("inputBirthday");
-    var selectDepartment=document.getElementById("selectDepartment"); //this is a select
-    var optionSelected=document.getElementById("optionNameDept")
-
+   
     //give them value.
     inputName.value=oPersona.nombre;
     inputSurname.value=oPersona.apellidos;
@@ -244,9 +324,6 @@ function edit(oPersona) {
 
             }         
         }
-
-    //get btnSave
-    var btnSave=document.getElementById("btnSave");
 
     //calls function saveChanges when btn clicked
     btnSave.onclick=function(){
@@ -272,7 +349,7 @@ function saveChanges(oPersona) {
     //we get an array of inputs from one specific row.
     var arrayInput= modal.querySelectorAll('[name=edit]');
 
-     //cast oPersona to type Persona
+     //build an object Persona
      var personModified= new Persona(oPersona.id, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value,  arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, arrayInput[6].value);
 
     var url="https://crudisasegundo.azurewebsites.net/api/personas/"+oPersona.id;

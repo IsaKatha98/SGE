@@ -34,13 +34,14 @@ namespace RepasoAPI.Controllers
                 salida = BadRequest(ex.Message);
             }
 
+            
+            
             return salida;
 
         }
 
         // PUT: ModelosController/Edit/5
-        [Route("{id}")]
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Put([FromBody] clsPersona p)
         {
             IActionResult salida;
