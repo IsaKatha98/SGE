@@ -1,0 +1,45 @@
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\bin\Debug\net7.0\Entidades.deps.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\bin\Debug\net7.0\Entidades.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\bin\Debug\net7.0\Entidades.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\Entidades.sourcelink.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\Entidades.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\Entidades.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.deps.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.deps.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.deps.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\Entidades\obj\Debug\net7.0\ref\Entidades.dll

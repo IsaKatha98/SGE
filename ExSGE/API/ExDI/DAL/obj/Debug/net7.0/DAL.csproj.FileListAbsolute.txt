@@ -1,0 +1,61 @@
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\bin\Debug\net7.0\DAL.deps.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\bin\Debug\net7.0\DAL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\bin\Debug\net7.0\DAL.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\bin\Debug\net7.0\Entidades.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\bin\Debug\net7.0\Entidades.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfo.cs
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.sourcelink.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CopyComplete
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\refint\DAL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\DAL.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\DAL\obj\Debug\net7.0\ref\DAL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\bin\Debug\net7.0\DAL.deps.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\bin\Debug\net7.0\DAL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\bin\Debug\net7.0\DAL.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\bin\Debug\net7.0\Entidades.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\bin\Debug\net7.0\Entidades.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.AssemblyReference.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfoInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfo.cs
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CoreCompileInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CopyComplete
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\refint\DAL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\DAL.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\DAL\obj\Debug\net7.0\ref\DAL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\DAL.deps.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.AssemblyReference.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfo.cs
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CopyComplete
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\refint\DAL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\ref\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\DAL.deps.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.AssemblyReference.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.AssemblyInfo.cs
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.csproj.CopyComplete
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\refint\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\DAL\obj\Debug\net7.0\ref\DAL.dll

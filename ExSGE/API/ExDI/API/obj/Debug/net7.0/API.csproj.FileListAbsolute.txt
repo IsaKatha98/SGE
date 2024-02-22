@@ -1,0 +1,137 @@
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\appsettings.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\API.exe
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\API.deps.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\API.runtimeconfig.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\API.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\API.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\BL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\DAL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\Entidades.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\BL.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\Entidades.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\bin\Debug\net7.0\DAL.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.sourcelink.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.csproj.CopyComplete
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\API\obj\Debug\net7.0\ref\API.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\appsettings.Development.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\appsettings.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\API.exe
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\API.deps.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\API.runtimeconfig.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\API.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\API.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\BL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\DAL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\Entidades.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\BL.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\Entidades.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\bin\Debug\net7.0\DAL.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\staticwebassets.build.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\staticwebassets.development.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\staticwebassets.pack.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.csproj.CopyComplete
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\refint\API.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\API\obj\Debug\net7.0\ref\API.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\appsettings.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.exe
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.deps.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.runtimeconfig.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\BL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\BL.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\bin\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.csproj.CopyComplete
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\API\obj\Debug\net7.0\ref\API.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\appsettings.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.exe
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.deps.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.runtimeconfig.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\API.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\BL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\BL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\bin\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.csproj.CopyComplete
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\API\obj\Debug\net7.0\ref\API.dll

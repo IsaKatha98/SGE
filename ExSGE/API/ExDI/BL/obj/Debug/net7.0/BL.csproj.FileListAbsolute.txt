@@ -1,0 +1,69 @@
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\bin\Debug\net7.0\BL.deps.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\bin\Debug\net7.0\BL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\bin\Debug\net7.0\BL.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\bin\Debug\net7.0\DAL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\bin\Debug\net7.0\Entidades.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\bin\Debug\net7.0\DAL.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\bin\Debug\net7.0\Entidades.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.csproj.AssemblyReference.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfoInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfo.cs
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.sourcelink.json
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.csproj.CopyComplete
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\refint\BL.dll
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\BL.pdb
+C:\Users\Fernando\Desktop\GitHub Instituto\DI\MAUI\ExDI\BL\obj\Debug\net7.0\ref\BL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\bin\Debug\net7.0\BL.deps.json
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\bin\Debug\net7.0\BL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\bin\Debug\net7.0\BL.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\bin\Debug\net7.0\DAL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\bin\Debug\net7.0\Entidades.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\bin\Debug\net7.0\DAL.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\bin\Debug\net7.0\Entidades.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.AssemblyReference.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfoInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfo.cs
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.CoreCompileInputs.cache
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.CopyComplete
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\refint\BL.dll
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\BL.pdb
+F:\CopiaCasa\Instituto\DAM\DI\Examenes\2023-24\2ª Ev\API\ExDI\BL\obj\Debug\net7.0\ref\BL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\bin\Debug\net7.0\BL.deps.json
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\bin\Debug\net7.0\BL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\bin\Debug\net7.0\BL.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\bin\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\bin\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.AssemblyReference.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfo.cs
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.CopyComplete
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\refint\BL.dll
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.pdb
+C:\Users\ikloerzer\Desktop\ExSGE\API\ExDI\BL\obj\Debug\net7.0\ref\BL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\bin\Debug\net7.0\BL.deps.json
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\bin\Debug\net7.0\BL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\bin\Debug\net7.0\BL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\bin\Debug\net7.0\DAL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\bin\Debug\net7.0\Entidades.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\bin\Debug\net7.0\DAL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\bin\Debug\net7.0\Entidades.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.AssemblyReference.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfoInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.AssemblyInfo.cs
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.csproj.CopyComplete
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\refint\BL.dll
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\BL.pdb
+C:\Users\ikloerzer\Documents\GitHub\SGE\ExSGE\API\ExDI\BL\obj\Debug\net7.0\ref\BL.dll
