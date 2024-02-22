@@ -6,10 +6,12 @@
 
     </head>
     <body>
+
         <form id="form1" runat="server">
             <div class="container">
                 <h2>People</h2>
                 <button type="button" id="btnNew" class="btn btn-primary btn-md pull btn-sm">New</button>
+                <button type="button" id="btnDelete" class="btn btn-primary btn-md pull btn-sm">Delete</button>
               
                 <table class="table" id="maintable">
                     <thead>
@@ -50,8 +52,8 @@
                 <label>Birthday</label>
                 <input type="date" id="inputBirthday" name="edit"></input>
                 <label>Department</label>
-                <select id="selectDepartment">
-                    <option id="optionNameDept" name="edit"></option>
+                <select id="selectDepartment" name="edit">
+                    <option id="optionNameDept" ></option>
                 
                 </select>
 

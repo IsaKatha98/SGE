@@ -58,6 +58,9 @@ let beforeRow;
  var inputBirthday=document.getElementById("inputBirthday");
  var selectDepartment=document.getElementById("selectDepartment"); //this is a select
  var optionSelected=document.getElementById("optionNameDept")
+ var divGif=document.createElement("div");
+ var btnDelete= document.getElementById("btnDelete");
+ 
 
 //gets the div that's going to be our modal.
 var modal=document.getElementById("myModal");
@@ -156,6 +159,13 @@ function getsIndex () {
     //we fetch the url
     fetch(url)
     .then(response=>{
+
+        if (response.readyState<4){
+            var gifImg= document.createElement("img");
+            gifImg.src="https://usagif.com/wp-content/uploads/loading-78.gif"
+            divGif.appendChild(gifImg);
+            modal.appendChild(divGif);
+        }
         
         //confirm thar response was a success
         if (!response.ok) {
@@ -180,8 +190,7 @@ function getsIndex () {
 
             //each row will have as it's own id the id of a Person.
             newRow.id=oPersona.id;
-           
-
+        
             //creates a cell for every property a person has.
             var cellName=newRow.insertCell(0);
             var cellSurname=newRow.insertCell(1);
@@ -282,6 +291,11 @@ function saveInsert() {
      postRequest.onreadystatechange=function(){
  
          if(postRequest.readyState>4) {
+
+            var gifImg= document.createElement("img");
+            gifImg.src="https://usagif.com/wp-content/uploads/loading-78.gif"
+            divGif.appendChild(gifImg);
+            modal.appendChild(divGif);
  
          } else if (postRequest.readyState==4&&postRequest.status==200) {
                //closes the modal
@@ -342,6 +356,9 @@ function edit(oPersona) {
         }
   }
 
+  btnDelete.onclick=function(){
+    deletePeople(oPersona);
+  }
 }
 
 function saveChanges(oPersona) {
@@ -376,5 +393,35 @@ function saveChanges(oPersona) {
     };
 
     modifyRequest.send(json);
+}
+
+function deletePeople (oPersona) {
+
+    var url="https://crudisasegundo.azurewebsites.net/api/personas/"+oPersona.id;
+
+    var deleteRequest= new XMLHttpRequest();
+
+    deleteRequest.open("PUT", url);
+    deleteRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    var json=JSON.stringify(oPersona);
+
+    deleteRequest.onreadystatechange=function(){
+
+        if(deleteRequest.readyState>4) {
+
+        } else if (deleteRequest.readyState==4&&deleteRequest.status==200) {
+              //closes the modal
+              var message= document.createElement('p');
+              message.innerHTML="Persona modificada con éxito";
+              modal.appendChild(message);
+  
+  
+              //reloads page
+        }
+    };
+
+    deleteRequest.send(json);
+    
+
 }
 
