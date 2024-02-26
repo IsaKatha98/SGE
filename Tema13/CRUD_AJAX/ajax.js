@@ -129,7 +129,7 @@ function first() {
                 row.style.backgroundColor="#CBC8C8";
             }
 
-            //get the person from the list that matches ther row's id.
+            //gets the person from the list that matches ther row's id.
             for (var i=0;i<listPeople.length;i++) {
                 
                 if (row.id==listPeople[i].id) {
@@ -401,7 +401,7 @@ function deletePeople (oPersona) {
 
     var deleteRequest= new XMLHttpRequest();
 
-    deleteRequest.open("PUT", url);
+    deleteRequest.open("DELETE", url);
     deleteRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     var json=JSON.stringify(oPersona);
 
@@ -410,13 +410,11 @@ function deletePeople (oPersona) {
         if(deleteRequest.readyState>4) {
 
         } else if (deleteRequest.readyState==4&&deleteRequest.status==200) {
-              //closes the modal
-              var message= document.createElement('p');
-              message.innerHTML="Persona modificada con éxito";
-              modal.appendChild(message);
-  
-  
+              //alerts of changes.
+              alert("Persona eliminada.")
+            
               //reloads page
+              location.reload();
         }
     };
 
