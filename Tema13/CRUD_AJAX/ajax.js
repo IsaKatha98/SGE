@@ -1,32 +1,32 @@
 
 //classes
 class Persona{
-    constructor (id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento) {
+    constructor (id, nombre, apellidos, direccion, telefono, foto, fechaNac, idDepartamento) {
         this.id=id;
         this.nombre=nombre;
         this.apellidos=apellidos;
         this.direccion=direccion;
-        this.tlf=tlf;
-        this.fotoURL=fotoURL;
+        this.telefono=telefono;
+        this.foto=foto;
         this.fechaNac=fechaNac;
         this.idDepartamento=idDepartamento;
     }
 }
 
 class Departamento {
-    constructor (idDepartamento, nombre) {
-        this.idDepartamento=idDepartamento;
+    constructor (id, nombre) {
+        this.id=id;
         this.nombre=nombre;
     }
 }
 
 class PersonaconnombreDepartamento extends Persona{
-    constructor (id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento) {
+    constructor (id, nombre, apellidos, direccion, telefono, foto, fechaNac, idDepartamento) {
         let nombreDepartamento="Departamento no asignado";
-        super(id, nombre, apellidos, direccion, tlf, fotoURL, fechaNac, idDepartamento);
+        super(id, nombre, apellidos, direccion, telefono, foto, fechaNac, idDepartamento);
         for (var i=0; i<listDept.length;i++) {
 
-            if (idDepartamento==listDept[i].idDepartamento) {
+            if (idDepartamento==listDept[i].id) {
                 
                 nombreDepartamento=listDept[i].nombre;
                 break;
@@ -61,6 +61,9 @@ let beforeRow;
  var divGif=document.createElement("div");
  var btnDelete= document.getElementById("btnDelete");
  
+ var urlConn="https://crudnervion.azurewebsites.net/api/personas/";
+ var urlConnDept = "https://crudnervion.azurewebsites.net/api/departamentos/";
+
 
 //gets the div that's going to be our modal.
 var modal=document.getElementById("myModal");
@@ -80,42 +83,9 @@ function first() {
     .then(()=>{
         getsIndex();
 
-        buttonNew.addEventListener("click", (insert)=>{
-             //opens the modal.
-            modal.style.display="block";
-
-            //for selectDepartment, we need options from a list
-            for (var i=0; i<listDept.length; i++) {
-        
-            
-                let option= document.createElement('option');
-                option.value=listDept[i].idDepartamento;
-                option.text=listDept[i].nombre;
-                selectDepartment.appendChild(option);
-
-            }
-
-             //calls function saveChanges when btn clicked
-            btnSave.onclick= function(){
-
-                
-                saveInsert();
-            };
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-        modal.style.display = "none";
-        }
-
-    }
-    }, false);
-
+        buttonNew.addEventListener("click", openModal, false);
+       
+          
         rowsPeople.addEventListener("click", (selected)=>{
             const row= selected.target.closest("tr");
 
@@ -151,26 +121,15 @@ function first() {
     
 }
 
-
 function getsIndex () {
 
-    var url="https://crudisasegundo.azurewebsites.net/api/personas";
-    
     //we fetch the url
-    fetch(url)
+    fetch(urlConn)
     .then(response=>{
-
-        if (response.readyState<4){
-            var gifImg= document.createElement("img");
-            gifImg.src="https://usagif.com/wp-content/uploads/loading-78.gif"
-            divGif.appendChild(gifImg);
-            modal.appendChild(divGif);
-        }
-        
         //confirm thar response was a success
         if (!response.ok) {
             //if not, it throws an error
-            throw new Error("Not working");
+            alert("Not working");
         
         }
 
@@ -183,7 +142,7 @@ function getsIndex () {
         for (var i=0; i<data.length;i++) {
 
             //creates a person
-            var oPersona= new PersonaconnombreDepartamento(data[i].id, data[i].nombre, data[i].apellidos, data[i].direccion, data[i].tlf, data[i].fotoURL, data[i].fechaNac, data[i].idDepartamento)
+            var oPersona= new PersonaconnombreDepartamento(data[i].id, data[i].nombre, data[i].apellidos, data[i].direccion, data[i].telefono, data[i].foto, data[i].fechaNac, data[i].idDepartamento)
              
             //creates a row for every person in the list.
             var newRow=rowsPeople.insertRow();
@@ -208,12 +167,13 @@ function getsIndex () {
             cellName.innerHTML=oPersona.nombre;
             cellSurname.innerHTML=oPersona.apellidos;
             cellAddress.innerHTML=oPersona.direccion;
-            cellPhone.innerHTML=oPersona.tlf;
+            cellPhone.innerHTML=oPersona.telefono;
             //we get the src of img.
-            img.src=oPersona.fotoURL;
+            img.src=oPersona.foto;
             //we append the pic as a child of cellPic.
             cellPic.appendChild(img);
-            cellBirthDate.innerHTML=oPersona.fechaNac;
+            //remember to format the date.
+            cellBirthDate.innerHTML=formatDate(oPersona.fechaNac);
             cellDept.innerHTML=oPersona.nombreDepartamento;
 
             //we add this object to listPeople.
@@ -225,25 +185,33 @@ function getsIndex () {
     
     //if there are errors.
     .catch(error=>{
-        //throw new Error("Not working", error);
+        alert("Not working", error);
     })
 
 }
 
+function formatDate(birthday){
+
+    const date = new Date(birthday);
+    
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2); // Agrega un 0 delante si es necesario
+    const day = ('0' + date.getDate()).slice(-2); // Agrega un 0 delante si es necesario
+
+    return `${year}-${month}-${day}`;
+}
 
 function getsDeptList () {
     return new Promise(function(resolve, reject){
 
-        var url="https://crudisasegundo.azurewebsites.net/api/departamentos";
-
         //we fetch the url
-        fetch(url)
+        fetch(urlConnDept)
         .then(response=>{
             
             //confirm thar response was a success
             if (!response.ok) {
                 //if not, it throws an error
-                throw new Error("Not working");
+                alert("Not working");
             
             }
     
@@ -253,7 +221,7 @@ function getsDeptList () {
         .then(data => {
    
             //resolves promise
-            listDept=data.map(dept => new Departamento(dept.idDepartamento, dept.nombre));
+            listDept=data.map(dept => new Departamento(dept.id, dept.nombre));
             resolve();
         })
         
@@ -269,6 +237,36 @@ function getsDeptList () {
    
 }
 
+
+function openModal() {
+
+      //opens the modal.
+      modal.style.display="block";
+
+      //for selectDepartment, we need options from a list
+      for (var i=0; i<listDept.length; i++) {
+  
+      
+          let option= document.createElement('option');
+          option.value=listDept[i].idDepartamento;
+          option.text=listDept[i].nombre;
+          selectDepartment.appendChild(option);
+
+      }
+
+       //calls function saveChanges when btn clicked
+      btnSave.onclick= function(){ 
+          saveInsert();
+      };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+
+}
+
 function saveInsert() {
 
     //we get an array of inputs from one specific row.
@@ -276,15 +274,11 @@ function saveInsert() {
 
     //TODO: hay problemas en recoger el idDepartamento.
     //build an object Persona
-    var personNew= new Persona(0, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value,  arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, 2);
-
-
-      //get the url
-      var url="https://crudisasegundo.azurewebsites.net/api/personas"
+    var personNew= new Persona(0, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value,  arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, 100 );
     
-     var postRequest= new XMLHttpRequest();
+    var postRequest= new XMLHttpRequest();
  
-     postRequest.open("POST", url);
+     postRequest.open("POST", urlConn);
      postRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
      var json=JSON.stringify(personNew);
  
@@ -293,19 +287,14 @@ function saveInsert() {
          if(postRequest.readyState>4) {
 
             var gifImg= document.createElement("img");
-            gifImg.src="https://usagif.com/wp-content/uploads/loading-78.gif"
+            gifImg.src=""
             divGif.appendChild(gifImg);
             modal.appendChild(divGif);
  
          } else if (postRequest.readyState==4&&postRequest.status==200) {
-               //closes the modal
-               var message= document.createElement('p');
-               message.innerHTML="Persona insertada con éxito";
-               modal.appendChild(message);
-   
-   
-               //reloads page
-         }
+              
+               alert("Persona creada con éxito")
+        }
      };
  
      postRequest.send(json);
@@ -316,23 +305,24 @@ function edit(oPersona) {
 
     //opens the modal.
     modal.style.display="block";
+    btnDelete.style.display="block";
    
     //give them value.
     inputName.value=oPersona.nombre;
     inputSurname.value=oPersona.apellidos;
     inputAddress.value=oPersona.direccion;
-    inputPic.value=oPersona.fotoURL;
-    inputPhoneNumber.value=oPersona.tlf;
-    inputBirthday.value=oPersona.fechaNac;
+    inputPic.value=oPersona.foto;
+    inputPhoneNumber.value=oPersona.telefono;
+    inputBirthday.value=formatDate(oPersona.fechaNac);
     optionSelected.value=oPersona.idDepartamento;
     optionSelected.text=oPersona.nombreDepartamento;
 
         //for selectDepartment, we need options from a list
         for (var i=0; i<listDept.length; i++) {
         
-            if (listDept[i].idDepartamento!=optionSelected.value) {
+            if (listDept[i].id!=optionSelected.value) {
                 let option= document.createElement('option');
-                option.value=listDept[i].idDepartamento;
+                option.value=listDept[i].id;
                 option.text=listDept[i].nombre;
                 selectDepartment.appendChild(option);
 
@@ -366,10 +356,10 @@ function saveChanges(oPersona) {
     //we get an array of inputs from one specific row.
     var arrayInput= modal.querySelectorAll('[name=edit]');
 
-     //build an object Persona
-     var personModified= new Persona(oPersona.id, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value,  arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, arrayInput[6].value);
+    //build an object Persona
+    var personModified= new Persona(oPersona.id, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value,  arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, arrayInput[6].value);
 
-    var url="https://crudisasegundo.azurewebsites.net/api/personas/"+oPersona.id;
+    var url=urlConn+oPersona.id;
 
     var modifyRequest= new XMLHttpRequest();
 
@@ -386,10 +376,10 @@ function saveChanges(oPersona) {
               var message= document.createElement('p');
               message.innerHTML="Persona modificada con éxito";
               modal.appendChild(message);
-  
-  
-              //reloads page
-        }
+
+                //reloads page
+                location.reload();
+          }
     };
 
     modifyRequest.send(json);
@@ -397,7 +387,7 @@ function saveChanges(oPersona) {
 
 function deletePeople (oPersona) {
 
-    var url="https://crudisasegundo.azurewebsites.net/api/personas/"+oPersona.id;
+    var url=urlConn+oPersona.id;
 
     var deleteRequest= new XMLHttpRequest();
 
@@ -420,6 +410,5 @@ function deletePeople (oPersona) {
 
     deleteRequest.send(json);
     
-
 }
 

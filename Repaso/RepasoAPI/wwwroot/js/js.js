@@ -184,7 +184,7 @@ function insert() {
         var arrayInput = modal.querySelectorAll('[name=edit]');
 
         //cast oPersona to type Persona
-        var personModified = new Persona(oPersona.id, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value, arrayInput[3].value, arrayInput[4].value, arrayInput[5].value, arrayInput[6].value);
+        var personModified = new Persona(oPersona.id, arrayInput[0].value, arrayInput[1].value, arrayInput[2].value, arrayInput[3].value, arrayInput[4].value, arrayInput[5].value);
 
         var url = "http://localhost:5036/api/persona/" + oPersona.id;
 
