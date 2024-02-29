@@ -7,59 +7,77 @@
     </head>
     <body>
 
-        <form id="form1" runat="server">
+        <form id="form" runat="server">
             <div class="container">
-                <h2>People</h2>
-              
-              
+               
+                <div id="sticky">
+                    <h2>Lista de personas</h2>
+                    <button id="btnNew" onclick="openModal()">Añadir</button>
+                    <select id="filter">
+                        <option>Todos</option>
+                    </select>
+
+                </div>
+               
                 <table class="table" id="maintable">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Surname</th>
-                            <th>Address</th>
-                            <th>Phone Number</th>
-                            <th>Pic</th>
-                            <th>Birth Date</th>
-                            <th>Department</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            <th>Imagen</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>Departamento</th>
                         </tr>
                     </thead>
                     <tbody id="rows">
                         
                     </tbody>
                 </table>
-
-                <button id="btnNew">New</button>
                
             </div>
         </form>
 
-        <div id="myModal" class="modal">
+        <div id="modalEdit" class="modal">
            
             <div class="modal-content">
-                <h1>Edit</h1>
                 <span class="close">&times;</span>
+                <h1 id="title">Editar</h1>
+               
             
-                <label>Name</label>
+                <label>Nombre</label>
                 <input id="inputName" name="edit" ></input>
-                <label>Surname</label>
+                <br>
+                <label>Apellidos</label>
                 <input id="inputSurname" name="edit"></input>
-                <label>Address</label>
+                <br>
+                <label>Dirección</label>
                 <input id="inputAddress" name="edit"></input>
-                <label>Phone Number</label>
+                <br>
+                <label>Teléfono</label>
                 <input id="inputPhoneNumber" name="edit"></input>
-                <label>Pic</label>
+                <br>
+                <label>Imagen</label>
                 <input id="inputPic" name="edit"></input>
-                <label>Birthday</label>
+                <br>
+                <label>Fecha de nacimiento</label>
                 <input type="date" id="inputBirthday" name="edit"></input>
-                <label>Department</label>
+                <br>
+                <label>Departamento</label>
                 <select id="selectDepartment" name="edit">
                     <option id="optionNameDept"  ></option>
                 
                 </select>
 
-                <button id="btnSave">Save changes</button>
-                <button id="btnDelete">Delete</button>
+                <br>
+              
+                <div id="buttons">
+                    <button id="btnSave">Guardar cambios</button>
+                    <button id="btnDelete">Eliminar</button>
+                </div>
+
+               
 
                 
             </div>        

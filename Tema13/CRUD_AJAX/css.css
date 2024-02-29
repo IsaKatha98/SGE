@@ -1,40 +1,61 @@
 
 
 body {
-  display: flex;
-  justify-content: center;
+  
   align-items: center;
-  height: 100vh;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
+/*Estilos tabla*/
 .container {
+  align-items: center;
+}
+
+table {
+ 
+  align-items: center;
+  width: 90%;
+  margin-left: 30px;
+}
+
+thead{
+  background-color: #4CAF50;
+  color: white;
+  height: 50px;
+}
+
+th, td, tr{
   text-align: center;
-  width: 100%;
-  max-width: 800px; /* Ajusta el valor según sea necesario */
-  margin-top: 20px;
 }
 
 
+/*Estilos modal*/
+
 .modal {
-  display: none;
-  position: fixed;
-  top: 0;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 60%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  min-width: 40%;
+  max-width: 70px;
+ max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 .close {
@@ -49,6 +70,24 @@ body {
   color: black;
 }
 
+label{ 
+  font-weight: bold;
+  width: 120px;
+  margin: 0;
+}
+
+select, input {
+  font-size: 16px;
+  width: 200px;
+
+}
+
+#buttons{
+display: flex;
+align-items: end;
+flex-direction: column;
+}
+
 /* Estilos para los botones */
 button {
   font-family: 'Roboto', sans-serif;
@@ -61,20 +100,37 @@ button {
 }
 
 #btnNew {
+  float: center;
   background-color: #4CAF50;
   color: white;
 }
 
+
 #btnDelete {
   display: none;
   background-color: #f44336;
-  color: white;
+  color: white;  
 }
 
 #btnSave {
   background-color: #008CBA;
   color: white;
 }
+
+
+#sticky{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: grey;
+  padding-top: 20px;
+  padding-left: 50px;
+  font-size: 20px;
+
+}
+
+
+
 
 
 
